@@ -27,3 +27,8 @@ The structure of the code is:
   - /data              # JSON or other data files (if needed)
   - /dist              # Compiled files (if using build tools like Webpack)
   - README.md          # Project documentation or instructions
+
+
+# 近期活跃度
+
+![Alt](https://repobeats.axiom.co/api/embed/64772a9877b624306c5d6d9635a2667821868f6c.svg "Repobeats analytics image")
