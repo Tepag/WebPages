@@ -22,6 +22,13 @@
     margin-right: auto;
     width: 50%;
 }
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 
 .lxgw-wenkai-tc-regular {
     font-family: "LXGW WenKai TC", cursive;
