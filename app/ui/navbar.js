@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="bg-gray-800">
+            <nav className="bg-transparent">
                 <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -42,21 +42,35 @@ export default function Navbar() {
                             {/* // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                             <Link 
                                 href="/"
-                                className={`link ${pathname === '/' ? 'rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                className={`link ${pathname === '/' ? 'rounded-md bg-purple-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
                                 Home
                             </Link>
 
                             <Link 
                                 href="/Groups"
-                                className={`link ${pathname === '/Groups' ? 'rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                className={`link ${pathname === '/Groups' ? 'rounded-md bg-purple-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
-                                Groups
+                                ❤️ Groups
                             </Link>
 
                             <Link 
+                                href="/AboutUs"
+                                className={`link ${pathname === '/AboutUs' ? 'rounded-md bg-purple-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            >
+                                About Us
+                            </Link>
+
+                            <Link 
+                                href="/JoinUs"
+                                className={`link ${pathname === '/JoinUs' ? 'rounded-md bg-purple-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            >
+                                Join Us
+                            </Link>
+                            
+                            <Link 
                                 href="/More"
-                                className={`link ${pathname === '/More' ? 'rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                className={`link ${pathname === '/More' ? 'rounded-md bg-purple-900 px-3 py-2 text-sm font-medium text-white' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
                                 More
                             </Link>
@@ -94,22 +108,35 @@ export default function Navbar() {
                         {/* // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                         <Link 
                             href="/"
-                            className={`link ${pathname === '/' ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            className={`link ${pathname === '/' ? 'block rounded-md bg-purple-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                         >
                             Home
                         </Link>
                         <Link 
                             href="/Groups" 
-                            className={`link ${pathname === '/Groups' ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            className={`link ${pathname === '/Groups' ? 'block rounded-md bg-purple-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                         >
-                            Groups
+                            ❤️ Groups
+                        </Link>
+                        <Link 
+                            href="/AboutUs" 
+                            className={`link ${pathname === '/AboutUs' ? 'block rounded-md bg-purple-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                        >
+                            About Us
+                        </Link>
+                        <Link 
+                            href="/JoinUs" 
+                            className={`link ${pathname === '/JoinUs' ? 'block rounded-md bg-purple-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                        >
+                            Join Us
                         </Link>
                         <Link 
                             href="/More" 
-                            className={`link ${pathname === '/More' ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            className={`link ${pathname === '/More' ? 'block rounded-md bg-purple-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                         >
                             More
                         </Link>
+                        
                     </div>
                 </div>
                 </nav>
