@@ -15,7 +15,7 @@ export default function GroupCard({image, title, description, whatsappLink,wecha
     return (
         <>
             <div className="relative flex h-full flex-col overflow-hidden ">
-                <img className="rounded-t-lg" src={image} alt="" />
+                <img className="rounded-t-lg h-full" src={image} alt="" />
                 <div className="p-5">
                     <a href="#">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
