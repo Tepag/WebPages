@@ -1,5 +1,8 @@
 import GroupCard from "./components/groupCard";
 
+
+
+
 export default function Home() {
     return (
         <>
