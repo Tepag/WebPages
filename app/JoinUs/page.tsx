@@ -14,7 +14,7 @@ export default function JoinUs() {
                         <div className="relative lg:row-span-2">
                             <div className="absolute inset-px rounded-lg bg-black"></div>
                             <div className="relative flex h-full flex-col overflow-hidden ">
-                                <img className="rounded-t-lg h-full" src="" alt="" />
+                                <img className="rounded-t-lg h-full" />
                                 <div className="p-5">
                                     <a href="#">
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">设计宣传部</h5>

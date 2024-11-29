@@ -13,3 +13,33 @@ export default function Home() {
         </>
     );
 } 
+
+// "use client"
+// import { motion } from "framer-motion"
+
+// const aniamtion1 = {
+//     hidden: {
+//       scale: .8,
+//       opacity: 0
+//     },
+//     visible: {
+//       scale: 1,
+//       opacity: 1,
+//       transition: {
+//         delay: .4
+//       }
+//     },
+// }
+
+// export default function Template({ children }: { children: React.ReactNode }) {
+//   return (
+
+//     <motion.div initial="hidden" animate="visible" variants={aniamtion1}>
+//       <h1 className="title">
+//         Wubba Lubba Dub Dub!
+//       </h1>
+//       {children}
+//     </motion.div>
+    
+//   )
+// }
