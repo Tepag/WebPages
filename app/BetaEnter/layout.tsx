@@ -10,6 +10,7 @@ export default function GroupsLayout({
     return (
       <section>
         {/* Include shared UI here e.g. a header or sidebar */}
+        ciao ciao dal layout
    
         {children}
       </section>
