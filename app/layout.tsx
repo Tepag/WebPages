@@ -1,5 +1,6 @@
 
 import Navbar from "../app/ui/navbar";
+import GradientBg from "../app/ui/gradientBg";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
+        <GradientBg />
         {children}
       </body>
     </html>
