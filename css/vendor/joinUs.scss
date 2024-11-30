@@ -30,12 +30,12 @@ $l-blue: #3C78C7;
 	background: linear-gradient(135deg, rgba(46,92,153,1) 0%,rgba(2,123,194,1) 100%) !important;
 	display: inline-block;
 
-	.grid {
+	.cgrid {
 		width: 1200px;
 		position: relative;
 		margin: 0 auto;
 
-		.grid-left {
+		.cgrid-left {
 			position: relative;
 			width: 400px;
 			float: left;
@@ -43,14 +43,14 @@ $l-blue: #3C78C7;
 	}
 	
 	@media only screen and (max-width: 1260px) {
-		.grid {
+		.cgrid {
 			padding: 0 30px;
 			width: 100%;
 		}
 	}
 
 	@media only screen and (max-width: 578px) {
-		.grid {
+		.cgrid {
 			padding: 0 25px;
 		}
 	}
@@ -295,6 +295,7 @@ $l-blue: #3C78C7;
 			.center-img {
 				width: 110%;
 				height: 110%;
+                
 				position: absolute;
 				z-index: 1;
 
