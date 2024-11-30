@@ -1,0 +1,515 @@
+/*
+正真的大佬，源代码的创作者 -> https://codepen.io/mikel301292/pen/xpoaGy <- 有机会支持下！💪
+*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #1f2532;
+  //cursor: none;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  width: 100%;
+  position: relative;
+}
+$l-blue: #3C78C7;
+.recruitment-process {
+	width: 100%;
+	position: relative;
+	padding: 50px 0;
+	background-color: #192e4d !important;
+	background: linear-gradient(135deg, rgba(46,92,153,1) 0%,rgba(2,123,194,1) 100%) !important;
+	display: inline-block;
+
+	.grid {
+		width: 1200px;
+		position: relative;
+		margin: 0 auto;
+
+		.grid-left {
+			position: relative;
+			width: 400px;
+			float: left;
+		}
+	}
+	
+	@media only screen and (max-width: 1260px) {
+		.grid {
+			padding: 0 30px;
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 578px) {
+		.grid {
+			padding: 0 25px;
+		}
+	}
+}
+
+.recruitment-text {
+	width: calc(100% - 500px);
+	position: relative;
+	float: right;
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+	transition: 500ms all;
+
+	.recruitment-copy {
+		width: 100%;
+		position: relative;
+		
+		.step {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 60px 70px 120px 70px;
+			
+			>* {
+				visibility: hidden;
+				opacity: 0;
+				transform: translateX(-50px);
+				transition: 1000ms all;
+				
+				&:nth-child(2) {
+					transition-delay: 100ms;
+				}
+			}
+			
+			&.active {
+			 >* {
+				visibility: visible;
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+		
+		&.next {
+			>* {
+				visibility: hidden;
+				opacity: 0;
+				transform: translateX(50px);
+			}
+		}
+		
+		h3, p {
+			margin: 0;
+		}
+		
+		h3 {
+			font-weight: 500;
+			font-size: 24px;
+			margin-bottom: 20px;
+			color: #192e4d;
+		}
+		
+		p {
+			color: #666;
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}
+
+.recruitment-controls {
+	width: 100%;
+	height: 80px;
+	background-color: #efefef;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0 0 10px 10px;
+	
+	.arrow {
+		width: 16px;
+		height: 16px;
+		border-top: 3px solid $l-blue;
+		border-left: 3px solid $l-blue;
+		transform: rotate(-45deg);
+		transition: 300ms all;
+		cursor: pointer;
+		
+		&:hover {
+			border-color: darken(#999,15%);
+		}
+
+		&.next {
+			transform: rotate(135deg);
+		}
+	}
+	.dots {
+		margin: 0 10px;
+		position: relative;
+
+		.dot {
+			width: 16px;
+			height: 16px;
+			background-color: #E6E6E6;
+			border-radius: 50%;
+			position: relative;
+			float: left;
+			margin: 0 5px;
+			transition: 300ms all;
+			cursor: pointer;
+			
+			&:hover {
+			 background-color: darken(#E6E6E6,15%);
+		 }
+		 
+		 &.active {
+			background-color: $l-blue;
+		}
+	}
+}
+}
+
+@media only screen and (max-width: 1260px) {
+	.recruitment-copy .step {
+		padding: 40px 40px 100px 40px;
+	}
+	.recruitment-controls {
+		height: 70px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	width: calc(100% - 375px);
+
+	.recruitment-copy .step {
+		padding: 30px 30px 70px 30px;
+
+		h3 {
+			font-size: 22px;
+			margin-bottom: 16px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+
+	.recruitment-controls {
+		height: 50px;
+	}
+}
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.recruitment-wrap {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	float: left;
+	margin-bottom: 50px;
+
+	.plane {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		z-index: 5;
+		pointer-events: none;
+
+		.plane-wrap {
+			$plane-size: 60px;
+			height: $plane-size;
+			display: inline-block;
+			transform-origin: 50% (200px + ($plane-size / 2));
+			transform: translateY(-50%) rotate(0deg);
+			transition: 1000ms all cubic-bezier(0.645, 0.045, 0.355, 1);
+
+			&.reverse {
+				img {
+					transform: scaleX(-1);
+				}
+			}
+
+			&.shadow {
+				img {
+					filter: drop-shadow(0px -15px 0px rgba(0, 0, 0, 0.1));
+				}
+			}
+
+			img {
+				position: relative;
+				top: 0;
+				height: $plane-size;
+				transition: 500ms all cubic-bezier(0.645, 0.045, 0.355, 1);
+				filter: drop-shadow(0px 15px 0px rgba(0, 0, 0, 0.1));
+			}
+		}
+	}
+
+	.center {
+		position: absolute;
+		height: 60%;
+		width: 60%;
+		z-index: 2;
+		border-radius: 50%;
+		box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid rgba(#fff, 0.3);
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		&:before {
+			content: "";
+			width: 102%;
+			height: 102%;
+			position: absolute;
+			box-shadow: inset 0 0px 30px rgba(#000, 0.3);
+			border-radius: 50%;
+			z-index: 10;
+		}
+
+		.center-imgs {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+
+			.center-img {
+				width: 110%;
+				height: 110%;
+				position: absolute;
+				z-index: 1;
+
+				&.active {
+					z-index: 2;
+
+					&:after {
+						transition: 10000ms cubic-bezier(0.23, 1, 0.32, 1);
+						transform: scale(1);
+					}
+				}
+
+				&:after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					background-position: center;
+					transition: 0ms;
+					transform: scale(0.9);
+				}
+
+				&:nth-child(1) {
+					&:after {
+						background-image: url(https://confessionsofatrolleydolly.files.wordpress.com/2015/07/57336.jpg);
+					}
+				}
+
+				&:nth-child(2) {
+					&:after {
+						background-image: url(https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2014/05/28/21/web-british-airways-bbcv2.jpg);
+					}
+				}
+
+				&:nth-child(3) {
+					&:after {
+						background-image: url(http://www.hoteliermiddleeast.com/pictures/gallery/Food%20and%20Beverage/RachelleCarter2.jpg);
+					}
+				}
+
+				&:nth-child(4) {
+					&:after {
+						background-image: url(http://dailyarabnews.net/uploadimage/nintchdbpict0003302536971.jpg);
+					}
+				}
+
+				&:nth-child(5) {
+					&:after {
+						background-image: url(https://photos.smugmug.com/British-Airways/i-GKFVgTC/0/6b1e05b8/M/2016-11-25_BA_Plan4_01-M.jpg);
+					}
+				}
+			}
+		}
+
+		.center-wipe {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 2;
+			background-image: url(http://res.cloudinary.com/da32ibrgl/image/upload/v1517306495/sprite-v2_bsi2cx.png);
+			background-size: auto 100%;
+			background-position: 0 0;
+		}
+	}
+
+	.ring {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(-90deg);
+
+		svg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+
+			circle {
+				width: 100%;
+				height: 100%;
+				stroke-width: 1;
+				fill: none;
+				stroke: #fff;
+
+				&.animate {
+					transition: 1000ms all cubic-bezier(0.645, 0.045, 0.355, 1);
+				}
+
+				&.dash {
+					opacity: 0.2;
+					stroke-dasharray: 10, 10;
+				}
+			}
+		}
+	}
+
+	.point-wrap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 3;
+
+		.point {
+			$point-size: 30px;
+
+			width: $point-size;
+			height: $point-size;
+			position: absolute;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			top: 0;
+			cursor: pointer;
+			align-items: center;
+			transform-origin: 50% (200px + ($point-size / 2));
+
+			.point-inner {
+				width: 100%;
+				height: 100%;
+				position: relative;
+
+				.point-transform {
+					background-color: #fff;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 50%;
+					transition: 600ms all;
+					box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+					span {
+						position: relative;
+						margin-top: 1px;
+						font-size: 16px;
+						display: block;
+						transition: 600ms all;
+						color: #888;
+					}
+				}
+			}
+
+			&:hover {
+				.point-transform {
+					background-color: #333;
+					span {
+						color: #fff;
+					}
+				}
+			}
+
+			&.active {
+				.point-transform {
+					transform: scale(0.3);
+					background-color: #333;
+
+					span {
+						color: #fff;
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1260px) {
+		margin-left: 20px;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		$newSize: 320;
+		width: $newSize * 1px;
+		height: $newSize * 1px;
+
+		circle {
+			transform-origin: 50% 50%;
+			$scale: $newSize / 400;
+			transform: scale($scale);
+		}
+
+		.plane .plane-wrap {
+			$plane-size: 40px;
+			height: $plane-size;
+			transform-origin: 50% (($newSize / 2 * 1px) + ($plane-size / 2));
+			img {
+				height: $plane-size;
+			}
+		}
+
+		.point-wrap {
+			.point {
+				$point-size: 40px;
+				width: $point-size;
+				height: $point-size;
+				transform-origin: 50% (($newSize / 2 * 1px) + ($point-size / 2));
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		left: 50%;
+		margin: 0;
+		transform: translateX(-50%);
+		margin-bottom: 30px;
+	}
+}
