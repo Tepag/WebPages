@@ -7,7 +7,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: #1f2532;
   color: #fff;
 }
 
@@ -26,8 +25,6 @@ section {
   width: 100%;
   position: relative;
   padding: 50px 0;
-  background-color: #192e4d !important;
-  background: linear-gradient(135deg, rgb(46, 92, 153) 0%, rgb(2, 123, 194) 100%) !important;
   display: inline-block;
 }
 .recruitment-process .cgrid {
@@ -56,7 +53,7 @@ section {
   width: calc(100% - 500px);
   position: relative;
   float: right;
-  background-color: #fff;
+  background-color: #1c1c1c;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
@@ -99,17 +96,17 @@ section {
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 20px;
-  color: #192e4d;
+  color: #0077fe;
 }
 .recruitment-text .recruitment-copy .step p {
-  color: #666;
+  color: #cfcfcf;
   font-size: 16px;
   line-height: 24px;
 }
 .recruitment-text .recruitment-controls {
   width: 100%;
   height: 80px;
-  background-color: #efefef;
+  background-color: #000000;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -280,26 +277,32 @@ section {
   transform: scale(0.9);
 }
 .recruitment-wrap .center .center-imgs .center-img:nth-child(1):after {
-  background-image: url(https://confessionsofatrolleydolly.files.wordpress.com/2015/07/57336.jpg);
+  background-image: url(https://www.ncsc.gov.uk/images/iStock-1704413556.jpg?mpwidth=545&mlwidth=737&twidth=961&dwidth=635&dpr=2.625&width=412);
 }
 .recruitment-wrap .center .center-imgs .center-img:nth-child(2):after {
-  background-image: url(https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2014/05/28/21/web-british-airways-bbcv2.jpg);
+  background-image: url(https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=1024);
 }
 .recruitment-wrap .center .center-imgs .center-img:nth-child(3):after {
-  background-image: url(http://www.hoteliermiddleeast.com/pictures/gallery/Food%20and%20Beverage/RachelleCarter2.jpg);
+  background-image: url(https://cdn.cs.1worldsync.com/0e/a7/0ea7a7bd-fbba-4454-8640-c432fee6fc41.jpg);
 }
 .recruitment-wrap .center .center-imgs .center-img:nth-child(4):after {
-  background-image: url(http://dailyarabnews.net/uploadimage/nintchdbpict0003302536971.jpg);
+  background-image: url(https://datalligence.ai/wp-content/uploads/2023/07/Top-12-ClickUp-Competitors-Alternatives-2029.webp);
 }
 .recruitment-wrap .center .center-imgs .center-img:nth-child(5):after {
-  background-image: url(https://photos.smugmug.com/British-Airways/i-GKFVgTC/0/6b1e05b8/M/2016-11-25_BA_Plan4_01-M.jpg);
+  background-image: url(https://images.business.com/app/uploads/2011/06/12131215/Leadership-Skills.png);
+}
+.recruitment-wrap .center .center-imgs .center-img:nth-child(6):after {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Euro_coins_and_banknotes_%28cropped%29.jpg/800px-Euro_coins_and_banknotes_%28cropped%29.jpg);
+}
+.recruitment-wrap .center .center-imgs .center-img:nth-child(7):after {
+  background-image: url(https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-b135bb1/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg);
 }
 .recruitment-wrap .center .center-wipe {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-image: url(http://res.cloudinary.com/da32ibrgl/image/upload/v1517306495/sprite-v2_bsi2cx.png);
+  background-image: url();
   background-size: auto 100%;
   background-position: 0 0;
 }
