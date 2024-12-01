@@ -40,3 +40,12 @@
 nav * {
     font-size: 105%;
 }
+
+.joinUsBackground {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/images/JoinUsBackground.JPG");
+    height: 100vh;
+}
