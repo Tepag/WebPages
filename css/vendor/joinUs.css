@@ -53,7 +53,7 @@ section {
   width: calc(100% - 500px);
   position: relative;
   float: right;
-  background-color: #1c1c1c;
+  background-color: #f0f0f0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
@@ -93,20 +93,20 @@ section {
   margin: 0;
 }
 .recruitment-text .recruitment-copy .step h3 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 20px;
-  color: #0077fe;
+  color: #0eaa95;
 }
 .recruitment-text .recruitment-copy .step p {
-  color: #cfcfcf;
+  color: #000000;
   font-size: 16px;
   line-height: 24px;
 }
 .recruitment-text .recruitment-controls {
   width: 100%;
   height: 80px;
-  background-color: #000000;
+  background-color: #e6e6e6;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -137,7 +137,7 @@ section {
 .recruitment-text .recruitment-controls .dots .dot {
   width: 16px;
   height: 16px;
-  background-color: #E6E6E6;
+  background-color: #afafaf;
   border-radius: 50%;
   position: relative;
   float: left;
@@ -149,7 +149,7 @@ section {
   background-color: silver;
 }
 .recruitment-text .recruitment-controls .dots .dot.active {
-  background-color: #3C78C7;
+  background-color: #56afa8;
 }
 @media only screen and (max-width: 1260px) {
   .recruitment-text .recruitment-copy .step {
