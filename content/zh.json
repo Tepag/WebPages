@@ -22,5 +22,39 @@
             "button3": "📸 Instagram",
             "button4": "敬请期待"
         }
+    },
+
+    "joinUs":{
+        "title": "职务分类",
+        "curriculum": "➡ 投递简历 ⬅",
+        "card1":{
+            "title": "设计宣传部",
+            "text": "<b>设计类</b>: 平面设计(ins post,Manifesto,locandine, manuale, Opuscoli, Dépliant)(AI, PS, ID ) <br /> <b>媒体运营</b>: ins, 小红书,youtube,<br /><b>视频制作</b>: (PR,剪映,,AE,AI 视频制作工具) <br />文案写手 文笔好 喜爱文字创作 <br />到活动现场负责social 发布 文字"
+        },
+        "card2":{
+            "title": "技术部",
+            "text": "网站制作与维护 (github,git,网站架设基础,) 2-3名 <br />前端设计(htlml, css)"
+        },
+        "card3":{
+            "title": "秘书部",
+            "text": "文字工作,文案,文字审核,法律相关背景与兴趣 社团文件管理 人力资源管理 社团社团官方邮 <br />(Microsoft Office, Google Workspace) <br />件管理 2名"
+        },
+        "card4":{
+            "title": "策划部门 events",
+            "text": "有参与活动组织意愿与想法,帮助活动组织并想获得相关经验与拥有相关经验的人 <br />(项目管理软件如 Notion,Clickup,Asana, 项目管理经验)"
+        },
+        "card5":{
+            "title": "商务部门",
+            "text": "活动赞助外联工作 协调赞助商要求与社团资源 (赞助资源开发 商业 以及务实)"
+        },
+        "card6":{
+            "title": "财务部",
+            "text": "有经济学基础及其相关知识(bilancio)1-2 名,财务报表,活动财务流动管理"
+        },
+        "card7":{
+            "title": "社管部",
+            "text": "兴趣社团管理(包括,新兴趣社团成立的规范化流程,群管理, 兴趣社团内部活动)"
+        }
+
     }
 }

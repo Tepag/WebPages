@@ -21,6 +21,38 @@
             "button3": "📸 Instagram",
             "button4": "WIP"
         }
+    },
+    "joinUs": {
+        "title": "Job Categories",
+        "card1": {
+            "title": "Design and Promotion Department",
+            "text": "<b>Design</b>: Graphic design (ins post, Manifesto, posters, manuals, brochures, leaflets) (AI, PS, ID) <br /> <b>Media Operations</b>: ins, Xiaohongshu, YouTube,<br /><b>Video Production</b>: (PR, Jianying, AE, AI video production tools) <br />Copywriter: Good writing skills, love for writing <br />Responsible for social media posts at events"
+        },
+        "card2": {
+            "title": "Technical Department",
+            "text": "Website creation and maintenance (GitHub, git, basic website setup) 2-3 people <br />Front-end design (HTML, CSS)"
+        },
+        "card3": {
+            "title": "Secretarial Department",
+            "text": "Writing work, copywriting, text review, legal background and interest, club document management, human resources management, official club email management <br />(Microsoft Office, Google Workspace) <br />2 people"
+        },
+        "card4": {
+            "title": "Planning Department",
+            "text": "Willingness and ideas to participate in event organization, helping with event organization, and people with relevant experience <br />(Project management software such as Notion, ClickUp, Asana, project management experience)"
+        },
+        "card5": {
+            "title": "Business Department",
+            "text": "Event sponsorship and external liaison work, coordinating sponsor requirements and club resources (sponsorship resource development, business, and pragmatism)"
+        },
+        "card6": {
+            "title": "Finance Department",
+            "text": "Basic knowledge of economics and related knowledge (balance sheet) 1-2 people, financial statements, event financial flow management"
+        },
+        "card7": {
+            "title": "Club Management Department",
+            "text": "Interest club management (including standardized processes for establishing new interest clubs, group management, internal activities of interest clubs)"
+        },
+        "curriculum": "➡ Submit Resume ⬅"
     }
 
 
