@@ -1,4 +1,6 @@
 var language; 
+var links;
+
 function getLanguage() {
     (
         localStorage.getItem('language') == null) ? setLanguage('en') : false;
@@ -8,6 +10,17 @@ function getLanguage() {
             success: function (lang) { language = lang } 
         }
 );
+}
+
+function getLinks() {
+    (
+        localStorage.getItem('links') == null) ? null : null;
+        $.ajax({ 
+            url:  '../content/links.json', 
+            dataType: 'json', async: false, 
+            success: function (linkjson) { link = linkjson } 
+        }
+    );
 }
 
 function setLanguage(lang) {
@@ -40,8 +53,8 @@ $(document).ready(function() {
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" id="navMore" href="./workInProgress.html"></a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" id="navInstagram" href="https://www.instagram.com/passionlab.polimi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></a>
-                        <a class="navbar-item" id="navRednote" href="https://www.xiaohongshu.com/user/profile/624ebd7c000000001000a777?xsec_token=YBfQfd6YxrhArkYMXpTT2fBKUt6Riyp1i6m7LEd8j04Yk=&xsec_source=app_share&xhsshare=CopyLink&appuid=628e8cdd00000000210265b1&apptime=1742463665&share_id=f5cab7f9ebd84f2ea0ea8b4d0f1b553f"></a>
+                        <a class="navbar-item" id="navInstagram" href=""></a>
+                        <a class="navbar-item" id="navRednote" href=""></a>
                         <a class="navbar-item" id="navSponsor" href="./workInProgress.html"></a>
                         <a class="navbar-item" id="navOurTeam" href="./workInProgress.html"></a>
                         <hr class="navbar-divider">
@@ -73,6 +86,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
+    getLinks();
     getLanguage(); // Ensure language is loaded on document ready
     $('#navRednote').text(language.navbar.rednote);
     $('#navInstagram').text(language.navbar.instagram);
@@ -84,6 +98,8 @@ $(document).ready(function(){
     $('#navHome').text(language.navbar.home);
     $('#navGroups').text(language.navbar.groups);
     $('#navMore').text(language.navbar.more);
+    $('#navRednote').attr('href', link.rednote);
+    $('#navInstagram').attr('href', link.instagram);
 });
 
 
