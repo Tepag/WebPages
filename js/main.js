@@ -2,7 +2,7 @@ var language;
 var link;
 function getLanguage() {
     (
-        localStorage.getItem('language') == null) ? setLanguage('en') : false;
+        localStorage.getItem('language') == null) ? setLanguage('zh') : false;
         $.ajax({ 
             url:  '../content/' +  localStorage.getItem('language') + '.json', 
             dataType: 'json', async: false, 
