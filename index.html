@@ -30,15 +30,15 @@
           <b>PLP</b>
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
+      
+      <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
           <a class="navbar-item" href="./index.html">
             Home
@@ -134,6 +134,11 @@
                 <div class="row__item-img" style="background-image:url(./assets/images/14.avif)"></div>
                 </div>
             </div>
+            <div class="row__item">
+              <div class="row__item-inner">
+              <div class="row__item-img" style="background-image:url(./assets/images/15-min.jpg)"></div>
+              </div>
+          </div>
            
         </div>
         <div class="row">
@@ -193,6 +198,16 @@
           <div class="row__item">
             <div class="row__item-inner">
               <div class="row__item-img" style="background-image:url(./assets/images/26-min.jpg)"></div>
+            </div>
+          </div>
+          <div class="row__item">
+            <div class="row__item-inner">
+              <div class="row__item-img" style="background-image:url(./assets/images/27-min.jpg)"></div>
+            </div>
+          </div>
+          <div class="row__item">
+            <div class="row__item-inner">
+              <div class="row__item-img" style="background-image:url(./assets/images/28-min.jpg)"></div>
             </div>
           </div>
           
@@ -271,6 +286,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   <script src="./js/vendor/introgridsection.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+
+    });
+  </script>
+  
 
 </body>
 
