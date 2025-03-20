@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "home": "HOME",
+        "groups": "GROUPS",
+        "more": "MORE",
+        "instagram": "📸 Instagram",
+        "rednote": "📕 Rednote",
+        "sponsor": "sponsor",
+        "joinUs": "join us",
+        "ourTeam": "our team",
+        "contactUs": "contact us",
+        "aboutUs": "About Us"
+    }
+}

@@ -13,37 +13,34 @@
     <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/logo.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/navbar.js"></script> <!--Navbar-->
+    <script src="../js/components/navbar.js"></script> <!--Navbar-->
   </head>
   <body class="lxgw-wenkai-tc-regular" style="background-color: black">
     <!------------->
     <!-- 1.导航栏 -->
     <!------------->
     <main>
-      
-
-      
     
-      <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
-    
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-          el.addEventListener('click', () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-    
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-          });
-        });
-    
-        });
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+        
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        
+            // Add a click event on each of them
+            $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+        
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+            });
+        
+            });
       </script>
       
   </body>
