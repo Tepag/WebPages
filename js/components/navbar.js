@@ -1,34 +1,3 @@
-var language; 
-var links;
-
-function getLanguage() {
-    (
-        localStorage.getItem('language') == null) ? setLanguage('en') : false;
-        $.ajax({ 
-            url:  '../content/' +  localStorage.getItem('language') + '.json', 
-            dataType: 'json', async: false, 
-            success: function (lang) { language = lang } 
-        }
-);
-}
-
-function getLinks() {
-    (
-        localStorage.getItem('links') == null) ? null : null;
-        $.ajax({ 
-            url:  '../content/links.json', 
-            dataType: 'json', async: false, 
-            success: function (linkjson) { link = linkjson } 
-        }
-    );
-}
-
-function setLanguage(lang) {
-    localStorage.setItem('language', lang);
-    getLanguage(); // Call getLanguage after setting the language
-    location.reload();
-}
-
 $(document).ready(function() {
     const navbarHtml = `
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
@@ -98,8 +67,8 @@ $(document).ready(function(){
     $('#navHome').text(language.navbar.home);
     $('#navGroups').text(language.navbar.groups);
     $('#navMore').text(language.navbar.more);
-    $('#navRednote').attr('href', link.rednote);
-    $('#navInstagram').attr('href', link.instagram);
+    $('#navRednote').attr('href', links.rednote);
+    $('#navInstagram').attr('href', links.instagram);
 });
 
 

@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/logo.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/components/navbar.js"></script> <!--Navbar-->
     
 </head>
@@ -213,23 +214,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script src="../js/vendor/introgridsection.js"></script>
     <script>
-        var language; 
-        function getLanguage() {
-            (
-                localStorage.getItem('language') == null) ? setLanguage('en') : false;
-                $.ajax({ 
-                    url:  '../content/' +  localStorage.getItem('language') + '.json', 
-                    dataType: 'json', async: false, 
-                    success: function (lang) { language = lang } 
-                }
-        );
-        }
         
-        function setLanguage(lang) {
-            localStorage.setItem('language', lang);
-            getLanguage(); // Call getLanguage after setting the language
-            location.reload();
-        }
 
         $(document).ready(function(){
             getLanguage(); // Ensure language is loaded on document ready
