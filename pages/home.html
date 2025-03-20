@@ -189,7 +189,7 @@
             <a id="homeCard1Button2" class="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="./workInProgress.html">
                 <!--TODO: 可增加icon-->
             </a>
-            <a id="homeCard1Button3" class="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="./workInProgress.html">
+            <a id="homeCard1Button3" class="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="">
                 <!--TODO: 可增加icon-->
             </a>
             <a id="homeCard1Button4" class="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="./workInProgress.html">
@@ -211,6 +211,7 @@
     <script src="../js/vendor/introgridsection.js"></script>
     <script>
         $(document).ready(function(){
+            getLinks();
             getLanguage(); // Ensure language is loaded on document ready
             $('#homeMainButton').text(language.home.mainButton);
             $('#homeCard1Title').text(language.home.card1.title);
@@ -218,6 +219,7 @@
             $('#homeCard1Button1').text(language.home.card1.button1);
             $('#homeCard1Button2').text(language.home.card1.button2);
             $('#homeCard1Button3').text(language.home.card1.button3);
+            $('#homeCard1Button3').attr('href', links.instagram);
             $('#homeCard1Button4').text(language.home.card1.button4);
         });
     </script>
