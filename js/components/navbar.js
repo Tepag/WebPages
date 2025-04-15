@@ -19,6 +19,7 @@ $(document).ready(function() {
             <div class="navbar-start">
                 <a class="navbar-item" id="navHome" href="./home.html"></a>
                 <a class="navbar-item" id="navGroups" href="./wechatgroups.html"></a>
+                <a class="navbar-item" id="navEvents" href="./events.html"></a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" id="navMore" href="./workInProgress.html"></a>
                     <div class="navbar-dropdown">
@@ -69,6 +70,7 @@ $(document).ready(function(){
     $('#navMore').text(language.navbar.more);
     $('#navRednote').attr('href', links.rednote);
     $('#navInstagram').attr('href', links.instagram);
+    $('#navEvents').text(language.navbar.events);
 });
 
 
