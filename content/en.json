@@ -56,7 +56,7 @@
         "curriculum": "➡ Submit Resume ⬅"
     },
     "groups": {
-        "count": "23",
+        "count": "22",
         "c1": {
             "title": "Volleyball Club 🏐️",
             "text": "Pass it to me! I want to spike!",
@@ -210,13 +210,6 @@
             "telegram": "https://t.me/joinchat/1",
             "whatsapp": "#",
             "image": "https://media-assets.wired.it/photos/638df6f1c05d74dd580c820d/3:2/w_1620,h_1080,c_limit/league-of-legends-cover.jpg"
-        },
-        "c23": {
-            "title": "Coding Club 💙",
-            "text": "Come discover the world of code!",
-            "telegram": "https://t.me/joinchat/1",
-            "whatsapp": "#",
-            "image": "https://imgs.search.brave.com/JTBHdzdZFpzanGP-YkrngvzPs2KLsBHJ0FQpWxz9bAs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4Lzc1LzA5LzUw/LzM2MF9GXzg3NTA5/NTA5OF9Cc1FRNjlE/ZUJxUkhwN05iVWU3/akdieG1HMjBKN09z/Ny5qcGc"
         }
     }
 
