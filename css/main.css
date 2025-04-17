@@ -38,8 +38,8 @@
 }
 
 nav * {
-    font-size: 105%;
-
+    font-size: 105% !important;
+    color: white !important;
 }
 
 .joinUsBackground {
