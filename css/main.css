@@ -39,11 +39,11 @@
 
 nav * {
     font-size: 105% !important;
-    color: white !important;
     font-family: "LXGW WenKai TC", cursive !important;
     font-weight: 400 !important;
     font-style: normal !important;
 }
+
 
 .joinUsBackground {
     background-attachment: scroll;

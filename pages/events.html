@@ -17,16 +17,15 @@
     <script src="../js/components/navbar.js"></script> <!--Navbar-->
 </head>
 <body>
-    <main style="background-color: #24282f">
+    <main>
 
         <!-- -------------------------------------- -->
         <!-- https://codepen.io/mrReiha/pen/RwPgLeM -->
         <!-- -------------------------------------- -->
 
-        <div class="wrapper">
+        <div class="wrapper" id ="eventsMainPart">
 
             <h2><strong>All Events<span>( 1 )</span></strong></h2>
-        
             <div class="cards">
         
                 <figure class="card">
@@ -36,7 +35,6 @@
             </div>
         
             <h2><strong>What's new?</strong></h2>
-        
             <div class="news">
         
                 <figure class="article">
@@ -57,28 +55,58 @@
         
                 </figure>
         
-                <figure class="article">
-        
-                    <img src="https://i.ibb.co/d42tNBK/news2.png" />
-        
-                    <figcaption>
-        
-                        <h3>Update</h3>
-        
-                        <p>
-        
-                            Just in time for Lunar New Year and the Rat’s time in the cyclical place of honor, the Treasure of Unbound Majesty is now available.
-        
-                        </p>
-        
-                    </figcaption>
-        
-                </figure>
-        
             </div>
         
         </div>
     </main>
+
+    <script>
+
+        $('eventsMainPart').ready(function(){
+            getLanguage(); // Ensure language is loaded on document ready
+            var y = language.groups.count;
+            for (var x = 1; x <= y; x++) {
+                var groupHtml = `
+                <div class="grid is-centered">
+                    <div class="flip">
+                        <div class="front" id="groupsC${x}Image">
+                        <h1 class="text-shadow" id="groupsC${x}Title"></h1>
+                        </div>
+                        <div class="back">
+                            <h2 id="groupsC${x}Text"></h2>
+                            <div class="buttons is-centered are-large" style="margin-top: 30%;">
+                                <a id="groupsC${x}Telegram" href="#">
+                                    <button class="button">
+                                        <img src="../assets/svg/telegram.svg" alt="wechat" style="width: 20px; height: 20px;">
+                                    </button>
+                                </a>
+                                <a id="groupsC${x}Whatsapp" href="#">
+                                    <button class="button">
+                                        <img src="../assets/svg/whatsapp.svg" alt="wechat" style="width: 20px; height: 20px;">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                $('.grid.is-col-min-15.is-centered').append(groupHtml);
+            }
+        });
+
+        $(document).ready(function(){
+            getLinks();
+            getLanguage(); // Ensure language is loaded on document ready
+
+            for (var i = 1; i <= language.groups.count; i++) {
+                $('#groupsC' + i + 'Title').text(language.groups['c' + i].title);
+                $('#groupsC' + i + 'Text').text(language.groups['c' + i].text);
+                $('#groupsC' + i + 'Image').attr('style', 'background-image: url(' + language.groups['c' + i].image + ')');
+                $('#groupsC' + i + 'Telegram').attr(language.groups['c' + i].telegram);
+                $('#groupsC' + i + 'Whatsapp').attr(language.groups['c' + i].whatsapp);
+            }
+            
+        });
+    </script>
 
 </body>
 </html>

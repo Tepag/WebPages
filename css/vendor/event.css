@@ -50,10 +50,6 @@ h2 strong,
 h2 span {
   vertical-align: middle;
 }
-body {
-  background: #24282f;
-  font-family: 'Alegreya Sans';
-}
 .wrapper {
   padding: 15px;
 }
@@ -65,7 +61,7 @@ h2 {
 }
 h2 strong {
   z-index: 2;
-  background: #24282f;
+  background: #15161a;
   padding: 4px 8px;
 }
 h2 span {
@@ -81,7 +77,7 @@ h2:after {
   height: 2px;
   left: 0;
   right: 0;
-  background: #373d47;
+  background: #2a2c34;
 }
 .cards,
 .news {
