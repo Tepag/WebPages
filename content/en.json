@@ -55,6 +55,25 @@
         },
         "curriculum": "➡ Submit Resume ⬅"
     },
+    "events": {
+        "cards":{
+            "count": "1",
+            "c1": {
+                "title": "Basket 3V3",
+                "image": "../assets/events/basketEvent.jpg",
+                "link": "https://forms.gle/7eMrCrrpUifF74Tj8"
+            }
+        },
+        "news":{
+            "count": "1",
+            "n1": {
+                "title": "Work In Progress",
+                "text": "Work In Progress",
+                "image": "../assets/images/testBackground.jpg"
+            }
+        }
+        
+    },
     "groups": {
         "count": "22",
         "c1": {

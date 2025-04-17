@@ -26,34 +26,11 @@
         <div class="wrapper" id ="eventsMainPart">
 
             <h2><strong>All Events<span>( 1 )</span></strong></h2>
-            <div class="cards">
-        
-                <figure class="card">
-                    <img src="../assets/events/basketEvent.jpg" />
-                </figure>
-        
-            </div>
+            <div class="cards" id="eventsCards"></div>
         
             <h2><strong>What's new?</strong></h2>
-            <div class="news">
-        
-                <figure class="article">
-        
-                    <img src="https://i.ibb.co/PtsYP7s/news1.jpg" />
-        
-                    <figcaption>
-        
-                        <h3>New Item</h3>
-        
-                        <p>
-        
-                            In today’s update, two heads are better than one, and three heads are better than that, as the all-new Flockheart’s Gamble Arcana item for Ogre Magi makes its grand debut.
-        
-                        </p>
-        
-                    </figcaption>
-        
-                </figure>
+            <div class="news" id="eventsNews">
+    
         
             </div>
         
@@ -61,35 +38,37 @@
     </main>
 
     <script>
-
-        $('eventsMainPart').ready(function(){
-            getLanguage(); // Ensure language is loaded on document ready
-            var y = language.groups.count;
+        $('eventsCards').ready(function(){
+            getLanguage();
+            var y = language.events.cards.count;
             for (var x = 1; x <= y; x++) {
-                var groupHtml = `
-                <div class="grid is-centered">
-                    <div class="flip">
-                        <div class="front" id="groupsC${x}Image">
-                        <h1 class="text-shadow" id="groupsC${x}Title"></h1>
-                        </div>
-                        <div class="back">
-                            <h2 id="groupsC${x}Text"></h2>
-                            <div class="buttons is-centered are-large" style="margin-top: 30%;">
-                                <a id="groupsC${x}Telegram" href="#">
-                                    <button class="button">
-                                        <img src="../assets/svg/telegram.svg" alt="wechat" style="width: 20px; height: 20px;">
-                                    </button>
-                                </a>
-                                <a id="groupsC${x}Whatsapp" href="#">
-                                    <button class="button">
-                                        <img src="../assets/svg/whatsapp.svg" alt="wechat" style="width: 20px; height: 20px;">
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-                $('.grid.is-col-min-15.is-centered').append(groupHtml);
+                var eventsHtml = `
+                    <a class="card" id="eventsC${x}Link" target="_blank">
+                        <img id="eventsC${x}Image"/>
+                        <figcaption class="glassEffect" id="eventsC${x}Title" style="color: black"></figcaption>
+                    </a>
+                `;
+                $('.cards').append(eventsHtml);
+            }
+        });
+
+        
+
+        $('eventsNews').ready(function(){
+            getLanguage();
+            var y = language.events.news.count;
+            for (var x = 1; x <= y; x++) {
+                var eventsHtml = `
+                    <figure class="article">
+                        <img id="eventsN${x}Image" src="" />
+                        <figcaption>
+                            <h3 id="eventsN${x}Title"></h3>
+                            <p id="eventsN${x}Text">
+                            </p>
+                        </figcaption>
+                    </figure>
+                `;
+                $('.news').append(eventsHtml);
             }
         });
 
@@ -97,15 +76,19 @@
             getLinks();
             getLanguage(); // Ensure language is loaded on document ready
 
-            for (var i = 1; i <= language.groups.count; i++) {
-                $('#groupsC' + i + 'Title').text(language.groups['c' + i].title);
-                $('#groupsC' + i + 'Text').text(language.groups['c' + i].text);
-                $('#groupsC' + i + 'Image').attr('style', 'background-image: url(' + language.groups['c' + i].image + ')');
-                $('#groupsC' + i + 'Telegram').attr(language.groups['c' + i].telegram);
-                $('#groupsC' + i + 'Whatsapp').attr(language.groups['c' + i].whatsapp);
+            for (var i = 1; i <= language.events.cards.count; i++) {
+                $('#eventsC' + i + 'Title').text(language.events.cards['c' + i].title);
+                $('#eventsC' + i + 'Link').attr('href', language.events.cards['c' + i].link);
+                $('#eventsC' + i + 'Image').attr('src', language.events.cards['c' + i].image);
             }
-            
+
+            for (var i = 1; i <= language.events.news.count; i++) {
+                $('#eventsN' + i + 'Title').text(language.events.news['n' + i].title);
+                $('#eventsN' + i + 'Text').text(language.events.news['n' + i].text);
+                $('#eventsN' + i + 'Image').attr('src', language.events.news['n' + i].image);
+            }
         });
+
     </script>
 
 </body>
