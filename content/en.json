@@ -26,45 +26,45 @@
     "joinUs": {
         "title": "Job Categories",
         "card1": {
-            "title": "Design and Promotion Department",
-            "text": "<b>Design</b>: Graphic design (ins post, Manifesto, posters, manuals, brochures, leaflets) (AI, PS, ID) <br /> <b>Media Operations</b>: ins, Xiaohongshu, YouTube,<br /><b>Video Production</b>: (PR, Jianying, AE, AI video production tools) <br />Copywriter: Good writing skills, love for writing <br />Responsible for social media posts at events"
+            "title": "Design and Publicity Department",
+            "text": " Graphic Design, Video Editing, Social Media Management (Xiaohongshu, WeChat Official Accounts, Instagram, Youtube), Event Photography."
         },
         "card2": {
-            "title": "Technical Department",
-            "text": "Website creation and maintenance (GitHub, git, basic website setup) 2-3 people <br />Front-end design (HTML, CSS)"
+            "title": "Technology Department",
+            "text": "Website Front-end and Back-end Development, Event Program Development, Event Technical Support."
         },
         "card3": {
-            "title": "Secretarial Department",
-            "text": "Writing work, copywriting, text review, legal background and interest, club document management, human resources management, official club email management <br />(Microsoft Office, Google Workspace) <br />2 people"
+            "title": " Events Planning Department",
+            "text": "Project Planning, Project Execution and Assistance, Team Building Planning, Interest Club Management (Interest Club President), Organization of Daily Activities for Interest Clubs, Event Material Procurement, External Collaboration Expansion and Liaison (including but not limited to event sponsorship)."
         },
         "card4": {
-            "title": "Planning Department",
-            "text": "Willingness and ideas to participate in event organization, helping with event organization, and people with relevant experience <br />(Project management software such as Notion, ClickUp, Asana, project management experience)"
+            "title": "Secretariat Department",
+            "text": "Club Document Management, HR, Financial Cashier, Text Review, Project File Editing, Data Statistics, Club Email Management and Reply."
         },
         "card5": {
-            "title": "Business Department",
-            "text": "Event sponsorship and external liaison work, coordinating sponsor requirements and club resources (sponsorship resource development, business, and pragmatism)"
+            "title": "Upcoming... ",
+            "text": ""
         },
         "card6": {
-            "title": "Finance Department",
-            "text": "Basic knowledge of economics and related knowledge (balance sheet) 1-2 people, financial statements, event financial flow management"
+            "title": "Upcoming... ",
+            "text": ""
         },
         "card7": {
-            "title": "Club Management Department",
-            "text": "Interest club management (including standardized processes for establishing new interest clubs, group management, internal activities of interest clubs)"
+            "title": "Upcoming... ",
+            "text": ""
         },
         "curriculum": "➡ Submit Resume ⬅"
     },
     "events": {
-        "cards":{
+        "cards": {
             "count": "1",
             "c1": {
-                "title": "Basket 3V3",
-                "image": "../assets/events/basketEvent.jpg",
+                "title": "Upcoming... ",
+                "image": "https://www.allworship.com/wp-content/uploads/2023/08/bigstock-Work-In-Progress-Concept-73569091-768x699.jpg",
                 "link": "https://forms.gle/7eMrCrrpUifF74Tj8"
             }
         },
-        "news":{
+        "news": {
             "count": "1",
             "n1": {
                 "title": "Work In Progress",
@@ -72,7 +72,6 @@
                 "image": "../assets/images/testBackground.jpg"
             }
         }
-        
     },
     "groups": {
         "count": "22",
@@ -231,9 +230,4 @@
             "image": "https://media-assets.wired.it/photos/638df6f1c05d74dd580c820d/3:2/w_1620,h_1080,c_limit/league-of-legends-cover.jpg"
         }
     }
-
-
-
-
-
 }
