@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { I18nProvider, useI18n } from "../components/I18nProvider";
+import { getAssetPath } from "../utils/paths";
 
 function WeChatClubsInner() {
   const { strings } = useI18n();
@@ -69,7 +70,7 @@ function WeChatClubsInner() {
                     >
                       <button className="button">
                         <img 
-                          src="/assets/svg/telegram.svg" 
+                          src={getAssetPath("/assets/svg/telegram.svg")} 
                           alt="telegram" 
                           style={{ width: '20px', height: '20px' }}
                         />
@@ -83,7 +84,7 @@ function WeChatClubsInner() {
                     >
                       <button className="button">
                         <img 
-                          src="/assets/svg/whatsapp.svg" 
+                          src={getAssetPath("/assets/svg/whatsapp.svg")} 
                           alt="whatsapp" 
                           style={{ width: '20px', height: '20px' }}
                         />
