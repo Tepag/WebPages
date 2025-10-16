@@ -14,10 +14,27 @@ function HomeInner() {
     script.async = true;
     document.body.appendChild(script);
     
+    // Add About Us button click functionality
+    const aboutUsButton = document.getElementById('homeMainButton');
+    const aboutUsContent = document.querySelector('.content');
+    
+    const handleAboutUsClick = () => {
+      if (aboutUsContent) {
+        aboutUsContent.style.display = aboutUsContent.style.display === 'none' ? 'block' : 'none';
+      }
+    };
+    
+    if (aboutUsButton) {
+      aboutUsButton.addEventListener('click', handleAboutUsClick);
+    }
+    
     return () => { 
       document.body.removeChild(script);
       // Remove noscroll class when leaving home page
       document.body.classList.remove('noscroll');
+      if (aboutUsButton) {
+        aboutUsButton.removeEventListener('click', handleAboutUsClick);
+      }
     };
   }, []);
   return (
@@ -84,20 +101,20 @@ function HomeInner() {
           </span>
         </div>
       </section>
-      <section className="content">
+      <section className="content" style={{ display: 'none' }}>
         <div className="content__header" >
           <h2 id="homeCard1Title">{strings?.home?.card1?.title || 'About Us'}</h2>
         </div>
         <div className="content__text lxgw-wenkai-tc-regular">
           <p className="buttons level-item has-text-centered">
-            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/wechatgroups">{strings?.home?.card1?.button1 || 'Groups'}</a>
+            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/wechatgroups/">{strings?.home?.card1?.button1 || 'Clubs'}</a>
             <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="#">{strings?.home?.card1?.button2 || 'Telegram'}</a>
             <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href={links?.instagram || '#'}>{strings?.home?.card1?.button3 || 'Instagram'}</a>
-            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/work">{strings?.home?.card1?.button4 || 'WIP'}</a>
+            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/work/">{strings?.home?.card1?.button4 || 'WIP'}</a>
           </p>
-          <p className="right" id="homeCard1Text1" dangerouslySetInnerHTML={{ __html: strings?.home?.card1?.text1 || '' }} />
-          <p className="highlight">What matters most is how the journey allows your passions to bloom, transforming you into your own firework 🎆</p>
-          <p id="homeMoreComing">More are coming!!</p>
+          <p className="right" id="homeCard1Text1" style={{ color: 'black' }} dangerouslySetInnerHTML={{ __html: strings?.home?.card1?.text1 || '' }} />
+          <p className="highlight" style={{ color: 'black' }}>What matters most is how the journey allows your passions to bloom, transforming you into your own firework 🎆</p>
+          <p id="homeMoreComing" style={{ color: 'black' }}>More are coming!!</p>
         </div>
       </section>
     </main>

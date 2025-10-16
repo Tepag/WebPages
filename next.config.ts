@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Ensure proper static export
+  distDir: 'out',
+  assetPrefix: '',
 };
 
 export default nextConfig;

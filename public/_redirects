@@ -1,0 +1,11 @@
+# GitHub Pages redirects for SPA routing
+# This ensures that all routes work correctly with static export
+
+# Redirect all non-file requests to index.html
+/*    /index.html   200
+
+# Specific redirects for our pages
+/wechatgroups    /wechatgroups/    301
+/events          /events/          301
+/join-us         /join-us/         301
+/work            /work/            301

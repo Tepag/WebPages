@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useI18n } from "./I18nProvider";
 
 export default function Navbar() {
@@ -30,17 +29,17 @@ export default function Navbar() {
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
           <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>{s.home || ''}</a>
-          <Link className="navbar-item" href="/wechatgroups">{s.groups || ''}</Link>
-          <Link className="navbar-item" href="/events">{s.events || ''}</Link>
+          <a className="navbar-item" href="/wechatgroups/">{s.groups || ''}</a>
+          <a className="navbar-item" href="/events/">{s.events || ''}</a>
           <div className="navbar-item has-dropdown is-hoverable">
-            <Link className="navbar-link" href="/work">{s.more || ''}</Link>
+            <a className="navbar-link" href="/work/">{s.more || ''}</a>
             <div className="navbar-dropdown">
               <a className="navbar-item" href={links?.instagram || '#'}>{s.instagram || ''}</a>
               <a className="navbar-item" href={links?.rednote || '#'}>{s.rednote || ''}</a>
-              <Link className="navbar-item" href="/work">{s.sponsor || ''}</Link>
-              <Link className="navbar-item" href="/work">{s.ourTeam || ''}</Link>
+              <a className="navbar-item" href="/work/">{s.sponsor || ''}</a>
+              <a className="navbar-item" href="/work/">{s.ourTeam || ''}</a>
               <hr className="navbar-divider" />
-              <Link className="navbar-item" href="/work">{s.contactUs || s.contactUS || ''}</Link>
+              <a className="navbar-item" href="/work/">{s.contactUs || s.contactUS || ''}</a>
             </div>
           </div>
         </div>
@@ -50,7 +49,7 @@ export default function Navbar() {
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('en'); }}>EN</a>
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('zh'); }}>中</a>
               <a className="button is-primary" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}><strong>{s.aboutUs || ''}</strong></a>
-              <Link className="button is-light" href="/join-us">{s.joinUs || ''}</Link>
+              <a className="button is-light" href="/join-us/">{s.joinUs || ''}</a>
             </div>
           </div>
         </div>
