@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { I18nProvider, useI18n } from "./components/I18nProvider";
+import { getAssetPath } from "./utils/paths";
 
 function HomeInner() {
   const { strings, links } = useI18n();
@@ -93,7 +94,7 @@ function HomeInner() {
         <div className="enter glassEffect has-text-centered">
           <span className="container">
             <figure className="image is-128x128 centerImage">
-              <img className="is-rounded is-1by1" src="/assets/images/logo.png" />
+              <img className="is-rounded is-1by1" src={getAssetPath("/assets/images/logo.png")} />
             </figure>
             <p className="title centerImage" style={{ marginTop: '5%', marginBottom: '3%', color: 'aliceblue' }}>Passion Lab Polimi</p>
             <p className="subtitle centerImage lxgw-wenkai-tc-regular" style={{ color: 'rgb(221, 221, 221)' }}>where passion sprout</p>

@@ -1,5 +1,6 @@
 "use client";
 import { useI18n } from "./I18nProvider";
+import { getAssetPath } from "../utils/paths";
 
 export default function Navbar() {
   const { strings, links, setLang } = useI18n();
@@ -9,7 +10,7 @@ export default function Navbar() {
       <div className="navbar-brand">
         <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>
           <figure className="image" style={{ maxWidth: '20px' }}>
-            <img className="is-rounded is-square" src="/assets/images/logo.png" alt="icon" />
+            <img className="is-rounded is-square" src={getAssetPath("/assets/images/logo.png")} alt="icon" />
           </figure>
           <b>PLP</b>
         </a>
