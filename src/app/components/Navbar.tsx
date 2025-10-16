@@ -6,7 +6,7 @@ export default function Navbar() {
   const { strings, links, setLang } = useI18n();
   const s = strings?.navbar || {};
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href={getRoutePath("/")}>
           <figure className="image" style={{ maxWidth: '20px' }}>
