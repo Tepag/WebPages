@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
   // Ensure proper static export
   distDir: 'out',
   assetPrefix: '',
+  // Add base path for GitHub Pages if needed
+  // basePath: process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : '',
 };
 
 export default nextConfig;
