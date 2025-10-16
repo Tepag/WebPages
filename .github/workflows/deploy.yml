@@ -44,6 +44,22 @@ jobs:
         ls -la out/css/ || echo "No css directory found"
         echo "Checking if logo exists:"
         ls -la out/assets/images/logo.png || echo "Logo not found"
+    
+    - name: Prepare files for GitHub Pages
+      run: |
+        # Create a temporary directory for GitHub Pages
+        mkdir -p gh-pages
+        
+        # Copy all files from out/ to gh-pages/
+        cp -r out/* gh-pages/
+        
+        # Verify the structure
+        echo "GitHub Pages structure:"
+        ls -la gh-pages/
+        echo "Assets in GitHub Pages:"
+        ls -la gh-pages/assets/ || echo "No assets directory found"
+        echo "CSS in GitHub Pages:"
+        ls -la gh-pages/css/ || echo "No css directory found"
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -53,7 +69,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       if: github.ref == 'refs/heads/main'
       with:
-        path: ./out
+        path: ./gh-pages
         retention-days: 30
         
     - name: Deploy to GitHub Pages
@@ -66,5 +82,5 @@ jobs:
       if: github.event_name == 'pull_request'
       with:
         name: build-files
-        path: ./out
+        path: ./gh-pages
         retention-days: 7
