@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>
+        <a className="navbar-item" href={getRoutePath("/")}>
           <figure className="image" style={{ maxWidth: '20px' }}>
             <img className="is-rounded is-square" src={getAssetPath("/assets/images/logo.png")} alt="icon" />
           </figure>
@@ -29,7 +29,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
-        <a className="navbar-item" href={getRoutePath("/")} onClick={(e) => { e.preventDefault(); window.location.href = getRoutePath('/'); }}>{s.home || ''}</a>
+        <a className="navbar-item" href={getRoutePath("/")}>{s.home || ''}</a>
         <a className="navbar-item" href={getRoutePath("/wechatgroups/")}>{s.groups || ''}</a>
         <a className="navbar-item" href={getRoutePath("/events/")}>{s.events || ''}</a>
         <div className="navbar-item has-dropdown is-hoverable">
@@ -49,7 +49,7 @@ export default function Navbar() {
             <div className="buttons">
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('en'); }}>EN</a>
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('zh'); }}>中</a>
-              <a className="button is-primary" href={getRoutePath("/")} onClick={(e) => { e.preventDefault(); window.location.href = getRoutePath('/'); }}><strong>{s.aboutUs || ''}</strong></a>
+              <a className="button is-primary" href={getRoutePath("/")}><strong>{s.aboutUs || ''}</strong></a>
               <a className="button is-light" href={getRoutePath("/join-us/")}>{s.joinUs || ''}</a>
             </div>
           </div>
