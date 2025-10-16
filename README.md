@@ -214,29 +214,57 @@ NEXT_PUBLIC_ANALYTICS_ID=your_analytics_id
 
 ## 🚀 Deployment
 
+### GitHub Pages (Automated)
+The project includes a GitHub Actions workflow for automatic deployment:
+
+1. **Enable GitHub Pages**: Go to your repository Settings → Pages
+2. **Set Source**: Select "GitHub Actions" as the source
+3. **Push to main**: The workflow will automatically build and deploy
+
+The workflow file is located at `.github/workflows/deploy.yml` and will:
+- Build the static site using `npm run build`
+- Deploy to GitHub Pages automatically
+- Work on every push to the `main` branch
+
 ### Production Build Process
 
 For production deployment, you only need these two commands:
 
 ```bash
-# 1. Build the application
+# 1. Build the application (creates static files in ./out)
 npm run build
 
-# 2. Start production server
+# 2. Start production server (for local testing)
 npm start
 ```
 
-### Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Deploy automatically on push to main branch
+### Static Export
+The project is configured for static export with `output: 'export'` in `next.config.ts`:
+- Generates static HTML files in the `./out` directory
+- All pages are pre-rendered as static files
+- Perfect for GitHub Pages, Netlify, or any static hosting
 
-### Manual Deployment
+### Manual Deployment Options
+
+#### GitHub Pages
 ```bash
-# Build the application
 npm run build
+# Upload the ./out directory contents to your GitHub Pages repository
+```
 
-# The build output will be in the .next directory
-# Deploy the entire project to your hosting provider
+#### Netlify
+```bash
+npm run build
+# Drag and drop the ./out directory to Netlify
+# Or connect your GitHub repository and set build command: npm run build
+# And publish directory: out
+```
+
+#### Vercel
+```bash
+npm run build
+# Connect your GitHub repository to Vercel
+# Vercel will automatically detect Next.js and deploy
 ```
 
 ### Docker Deployment
