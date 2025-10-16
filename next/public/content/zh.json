@@ -1,0 +1,233 @@
+{
+    "navbar": {
+        "aboutUs": "关于我们",
+        "home": "首页",
+        "groups": "兴趣社团",
+        "more": "更多",
+        "instagram": "📸 Instagram",
+        "rednote": "📕 小红书",
+        "sponsor": "赞助商",
+        "ourTeam": "我们的团队",
+        "contactUS": "联系我们",
+        "joinUs": "加入我们",
+        "events": "活动"
+    },
+    "home": {
+        "mainButton": "关于我们",
+        "card1": {
+            "title": "About US",
+            "text1": "要成就伟大的事业，我们不仅要行动，还要梦想；不仅要计划，还要相信。<br>创造、学习和设定目标是个人与职业成长的基石。持续的创造能激发创新精神，使头脑保持活跃，让人们探索新想法并表达独特的视角。而学习则拓展我们的知识，赋予我们在瞬息万变的世界中前行的能力。我们致力于将人们连接在一起，共同<strong>成长</strong>，让大学生活更加<strong>丰富多彩</strong>，充满<strong>温暖与爱</strong>。",
+            "button1": "👉兴趣社团👈",
+            "button2": "Telegram群",
+            "button3": "📸 Instagram",
+            "button4": "施工中"
+        }
+    },
+    "joinUs": {
+        "title": "职务分类",
+        "curriculum": "➡ 投递简历 ⬅",
+        "card1": {
+            "title": "设计宣传部",
+            "text": "平面设计, 视频编辑, 社媒运营 (xhs, 微信公众号, Ins, Youtube), 活动摄影。"
+        },
+        "card2": {
+            "title": "技术部",
+            "text": "网站前端与后端开发, 活动程序开发, 活动技术支持."
+        },
+        "card3": {
+            "title": "策划部门 events",
+            "text": "项目策划, 项目执行与协助, 团建策划, 兴趣社团管理(兴趣社社长), 兴趣社团日常活动组织，活动物资采购, 外部合作拓展与联络（包括但不限于活动赞助"
+        },
+        "card4": {
+            "title": "秘书部",
+            "text": "社团文件管理, HR, 财务出纳, 文字审核, 项目文件编辑, 数据统计, 社团邮箱管理与回复。"
+        },
+        "card5": {
+            "title": "Upcoming... ",
+            "text": ""
+        },
+        "card6": {
+            "title": "Upcoming... ",
+            "text": ""
+        },
+        "card7": {
+            "title": "Upcoming... ",
+            "text": ""
+        }
+    },
+    "events": {
+        "cards": {
+            "count": "1",
+            "c1": {
+                "title": "Upcoming... ",
+                "image": "https://www.allworship.com/wp-content/uploads/2023/08/bigstock-Work-In-Progress-Concept-73569091-768x699.jpg",
+                "link": "https://forms.gle/7eMrCrrpUifF74Tj8"
+            }
+        },
+        "news": {
+            "count": "1",
+            "n1": {
+                "title": "Work In Progress",
+                "text": "Work In Progress",
+                "image": "../assets/images/testBackground.jpg"
+            }
+        }
+    },
+    "groups": {
+        "count": "22",
+        "c1": {
+            "title": "排球社 🏐️",
+            "text": "传给我！我要扣球！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://cdn.britannica.com/95/190895-050-955A908C/volleyball-match-Italy-Russia-Milan-Volleyball-World.jpg"
+        },
+        "c2": {
+            "title": "羽毛球社 🏸️",
+            "text": "哈哈！被我接到了吧！",
+            "telegram": "https://t.me/+6MliZpfkKVo1YWRk",
+            "whatsapp": "#",
+            "image": "https://sportascuola.altervista.org/wp-content/uploads/2022/06/BWF-696x364-1.jpg"
+        },
+        "c3": {
+            "title": "辩论社🎓💬🤬",
+            "text": "挑战者，阐述你的视角吧！",
+            "telegram": "https://t.me/+O5OOkDnMfko4MmU8",
+            "whatsapp": "#",
+            "image": "https://d1gtq9mqg5x3oe.cloudfront.net/hermes/images/_articles/photography/urnow/2022/10-october/19-final-debates/promo/no-more-debates-promo-final-3840x2160.jpg"
+        },
+        "c4": {
+            "title": "ACG动漫社🌸",
+            "text": "That Time I Got Reincarnated as a ___",
+            "telegram": "https://t.me/+IWWNT7u6cJQzZmM0",
+            "whatsapp": "#",
+            "image": "https://m.media-amazon.com/images/S/pv-target-images/83edca494667495eaa945eccd2de76f00c5cf07d7e5d3ec1b6447c01475b3743._SX1080_FMjpg_.jpg"
+        },
+        "c5": {
+            "title": "桌游社🎲",
+            "text": "思考 策略 战！",
+            "telegram": "https://t.me/+zZyErf2WIyQ3OTQ0",
+            "whatsapp": "#",
+            "image": "https://assetsio.gnwcdn.com/the-art-project-board-game-gameplay-wider.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+        },
+        "c6": {
+            "title": "登山社🗻",
+            "text": "这空气，这风景，值了！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://t3.ftcdn.net/jpg/02/96/46/88/360_F_296468884_UczFBUvubhtA7zx73epphJ8vCgtkYx9s.jpg"
+        },
+        "c7": {
+            "title": "篮球社🏀",
+            "text": "唱 跳 RAP _",
+            "telegram": "https://t.me/+-J1_j2rlG78xMDc0",
+            "whatsapp": "#",
+            "image": "https://storage.googleapis.com/pod_public/1300/180356.jpg"
+        },
+        "c8": {
+            "title": "足球社⚽️",
+            "text": "GOAAALLL！",
+            "telegram": "https://t.me/+JcwuHO7Ob5AzNmQ8",
+            "whatsapp": "#",
+            "image": "https://images.mlssoccer.com/image/private/t_q-best/mls-min/yv32xk5ai30plqoaapl9.jpg"
+        },
+        "c9": {
+            "title": "网球社🎾",
+            "text": "Nice Shot!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/rpazKg7uhiIK9VqYYEyoQ0W2wOILopfF1WZ6NoKd3XY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcz/MTg3MDQ4L3Bob3Rv/L3NtaWxpbmctdGVu/bmlzLWJhbGwuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWxm/X2g3Y1Q0VGtqOW1i/cEVySzViR01qMDVn/TWdWTUNDNUl2aENx/OFRoRXM9"
+        },
+        "c10": {
+            "title": "乒乓球社🏓",
+            "text": "再来一把！",
+            "telegram": "https://t.me/+I3O3CGTZTzdkOGFk",
+            "whatsapp": "#",
+            "image": "https://blattbilliards.com/cdn/shop/articles/two-ping-pong-paddles-and-ball-on-blue-ping-pong-table_1024x1024.jpg?v=1692700198"
+        },
+        "c11": {
+            "title": "健身社🏋️",
+            "text": "creatine!!muscle!!Protein!!",
+            "telegram": "https://t.me/+qrm7N0aBKPI4ZTg0",
+            "whatsapp": "#",
+            "image": "https://img.mensxp.com/media/content/2017/Jul/start-training-your-lsquo-boxer-rsquo-s-muscle-rsquo-for-a-strong-and-ripped-core1-1499756968.jpg?w=900&h=674&cc=1"
+        },
+        "c12": {
+            "title": "滑雪社⛷️",
+            "text": "WEEEEEEE",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://www.skiworld.co.uk/blog/wp-content/uploads/2021/11/Skiers-jumping.jpg"
+        },
+        "c13": {
+            "title": "国际象棋社♟️",
+            "text": "Checkmate!",
+            "telegram": "https://t.me/+FnneUNrZVB4zZWY0",
+            "whatsapp": "#",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Chess_pieces_close_up.jpg/1200px-Chess_pieces_close_up.jpg"
+        },
+        "c14": {
+            "title": "biliardino社🏟️",
+            "text": "我的魅力可是很深奥的",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/OSuwFNbd_BLxc5tNYijQnVJCB8ZNi5Qn57RfDGWD1Z8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF6eS1QeVFqaEwu/anBn"
+        },
+        "c15": {
+            "title": "华夏文化社🪷",
+            "text": "一个你可能不知道的世界",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Ma_Yuan_-_Water_Album_-_The_Yellow_River_Breaches_its_Course.jpg"
+        },
+        "c16": {
+            "title": "美食社🥘",
+            "text": "好香，饿了就来吧！",
+            "telegram": "https://t.me/+KEG5uIUzKKdiNTA8",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/mv6bQwv3nX7wNA_Q0p-EBu-ZBvQtrq_qRG0W1oy2EsI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/ZmxhdGxheS1pcm9u/LXNraWxsZXQtd2l0/aC1tZWF0LWFuZC1v/dGhlci1mb29kLmpw/Zz93aWR0aD0xMDAw/JmZvcm1hdD1wanBn/JmV4aWY9MCZpcHRj/PTA"
+        },
+        "c17": {
+            "title": "电影社🎥",
+            "text": "欢迎来到影视的世界！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://cdn.pixabay.com/photo/2013/11/28/10/02/camera-219958_1280.jpg"
+        },
+        "c18": {
+            "title": "阅读社📖",
+            "text": "一起拓展知识吧！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://thumbs.dreamstime.com/b/open-magical-book-contains-fantastic-stories-reading-books-literature-allows-you-to-plunge-world-imagination-295754284.jpg"
+        },
+        "c19": {
+            "title": "音乐社🎵",
+            "text": "让氛围燃起来吧！",
+            "telegram": "https://t.me/+kCMv6lpd1tE3MDg0",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/L6GEUph3oEL8-GOywudfE4Ne94WNydhK8UATpj7QZkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjg1/MTExOTk4L3Bob3Rv/L3lvdW5nLWdpcmwt/ZGFuY2luZy10by10/aGUtbXVzaWMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVhB/OFhHNUZ5Z2UxZVIt/NjlGZVJiWHdJajdt/VmduaHJUTERiOVRK/aHhiMjQ9"
+        },
+        "c20": {
+            "title": "摄影社📹",
+            "text": "来记录美好时刻吧！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2lybCUyMHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        "c21": {
+            "title": "电游社🎮",
+            "text": "第九艺术！启动！",
+            "telegram": "https://t.me/+95AikB-AxuliMTI0",
+            "whatsapp": "#",
+            "image": "https://delfos.net.br/wp-content/uploads/2020/04/nier-automata-2b-9s-a2-1.jpg"
+        },
+        "c22": {
+            "title": "LoL社👾",
+            "text": "德玛西亚！",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://media-assets.wired.it/photos/638df6f1c05d74dd580c820d/3:2/w_1620,h_1080,c_limit/league-of-legends-cover.jpg"
+        }
+    }
+}

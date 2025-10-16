@@ -1,0 +1,233 @@
+{
+    "navbar": {
+        "home": "HOME",
+        "groups": "GROUPS",
+        "more": "MORE",
+        "instagram": "📸 Instagram",
+        "rednote": "📕 Rednote",
+        "sponsor": "sponsor",
+        "joinUs": "join us",
+        "ourTeam": "our team",
+        "contactUs": "contact us",
+        "aboutUs": "About Us",
+        "events": "EVENTS"
+    },
+    "home": {
+        "mainButton": "About Us",
+        "card1": {
+            "title": "About Us",
+            "text1": "To accomplish great things, we must not only act, but also dream; not only plan, but also believe.<br>Creating, learning, and setting goals are the cornerstones of personal and professional growth. Continuous creation can inspire innovation, keep the mind active, and allow people to explore new ideas and express unique perspectives. Learning expands our knowledge and equips us to navigate a rapidly changing world. We are committed to connecting people to grow together, making university life more colorful, filled with warmth and love.",
+            "button1": "👉Groups👈",
+            "button2": "Telegram",
+            "button3": "📸 Instagram",
+            "button4": "Work In Progress"
+        }
+    },
+    "joinUs": {
+        "title": "Job Categories",
+        "card1": {
+            "title": "Design and Publicity Department",
+            "text": " Graphic Design, Video Editing, Social Media Management (Xiaohongshu, WeChat Official Accounts, Instagram, Youtube), Event Photography."
+        },
+        "card2": {
+            "title": "Technology Department",
+            "text": "Website Front-end and Back-end Development, Event Program Development, Event Technical Support."
+        },
+        "card3": {
+            "title": " Events Planning Department",
+            "text": "Project Planning, Project Execution and Assistance, Team Building Planning, Interest Club Management (Interest Club President), Organization of Daily Activities for Interest Clubs, Event Material Procurement, External Collaboration Expansion and Liaison (including but not limited to event sponsorship)."
+        },
+        "card4": {
+            "title": "Secretariat Department",
+            "text": "Club Document Management, HR, Financial Cashier, Text Review, Project File Editing, Data Statistics, Club Email Management and Reply."
+        },
+        "card5": {
+            "title": "Upcoming... ",
+            "text": ""
+        },
+        "card6": {
+            "title": "Upcoming... ",
+            "text": ""
+        },
+        "card7": {
+            "title": "Upcoming... ",
+            "text": ""
+        },
+        "curriculum": "➡ Submit Resume ⬅"
+    },
+    "events": {
+        "cards": {
+            "count": "1",
+            "c1": {
+                "title": "Upcoming... ",
+                "image": "https://www.allworship.com/wp-content/uploads/2023/08/bigstock-Work-In-Progress-Concept-73569091-768x699.jpg",
+                "link": "https://forms.gle/7eMrCrrpUifF74Tj8"
+            }
+        },
+        "news": {
+            "count": "1",
+            "n1": {
+                "title": "Work In Progress",
+                "text": "Work In Progress",
+                "image": "../assets/images/testBackground.jpg"
+            }
+        }
+    },
+    "groups": {
+        "count": "22",
+        "c1": {
+            "title": "Volleyball Club 🏐️",
+            "text": "Pass it to me! I want to spike!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://cdn.britannica.com/95/190895-050-955A908C/volleyball-match-Italy-Russia-Milan-Volleyball-World.jpg"
+        },
+        "c2": {
+            "title": "Badminton Club 🏸️",
+            "text": "Haha! I caught it!",
+            "telegram": "https://t.me/+6MliZpfkKVo1YWRk",
+            "whatsapp": "#",
+            "image": "https://sportascuola.altervista.org/wp-content/uploads/2022/06/BWF-696x364-1.jpg"
+        },
+        "c3": {
+            "title": "Debate Club 🎓💬🤬",
+            "text": "Challenger, state your perspective!",
+            "telegram": "https://t.me/+O5OOkDnMfko4MmU8",
+            "whatsapp": "#",
+            "image": "https://d1gtq9mqg5x3oe.cloudfront.net/hermes/images/_articles/photography/urnow/2022/10-october/19-final-debates/promo/no-more-debates-promo-final-3840x2160.jpg"
+        },
+        "c4": {
+            "title": "ACG Anime Club 🌸",
+            "text": "That Time I Got Reincarnated as a ___",
+            "telegram": "https://t.me/+IWWNT7u6cJQzZmM0",
+            "whatsapp": "#",
+            "image": "https://m.media-amazon.com/images/S/pv-target-images/83edca494667495eaa945eccd2de76f00c5cf07d7e5d3ec1b6447c01475b3743._SX1080_FMjpg_.jpg"
+        },
+        "c5": {
+            "title": "Board Game Club 🎲",
+            "text": "Think Strategy Battle!",
+            "telegram": "https://t.me/+zZyErf2WIyQ3OTQ0",
+            "whatsapp": "#",
+            "image": "https://assetsio.gnwcdn.com/the-art-project-board-game-gameplay-wider.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+        },
+        "c6": {
+            "title": "Mountaineering Club 🗻",
+            "text": "This air, this scenery, worth it!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://t3.ftcdn.net/jpg/02/96/46/88/360_F_296468884_UczFBUvubhtA7zx73epphJ8vCgtkYx9s.jpg"
+        },
+        "c7": {
+            "title": "Basketball Club 🏀",
+            "text": "Sing Dance RAP _",
+            "telegram": "https://t.me/+-J1_j2rlG78xMDc0",
+            "whatsapp": "#",
+            "image": "https://storage.googleapis.com/pod_public/1300/180356.jpg"
+        },
+        "c8": {
+            "title": "Football Club ⚽️",
+            "text": "GOAAALLL!",
+            "telegram": "https://t.me/+JcwuHO7Ob5AzNmQ8",
+            "whatsapp": "#",
+            "image": "https://images.mlssoccer.com/image/private/t_q-best/mls-min/yv32xk5ai30plqoaapl9.jpg"
+        },
+        "c9": {
+            "title": "Tennis Club 🎾",
+            "text": "Nice Shot!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/rpazKg7uhiIK9VqYYEyoQ0W2wOILopfF1WZ6NoKd3XY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcz/MTg3MDQ4L3Bob3Rv/L3NtaWxpbmctdGVu/bmlzLWJhbGwuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWxm/X2g3Y1Q0VGtqOW1i/cEVySzViR01qMDVn/TWdWTUNDNUl2aENx/OFRoRXM9"
+        },
+        "c10": {
+            "title": "Table Tennis Club 🏓",
+            "text": "One more game!",
+            "telegram": "https://t.me/+I3O3CGTZTzdkOGFk",
+            "whatsapp": "#",
+            "image": "https://blattbilliards.com/cdn/shop/articles/two-ping-pong-paddles-and-ball-on-blue-ping-pong-table_1024x1024.jpg?v=1692700198"
+        },
+        "c11": {
+            "title": "Fitness Club 🏋️",
+            "text": "Creatine!! Muscle!! Protein!!",
+            "telegram": "https://t.me/+qrm7N0aBKPI4ZTg0",
+            "whatsapp": "#",
+            "image": "https://img.mensxp.com/media/content/2017/Jul/start-training-your-lsquo-boxer-rsquo-s-muscle-rsquo-for-a-strong-and-ripped-core1-1499756968.jpg?w=900&h=674&cc=1"
+        },
+        "c12": {
+            "title": "Skiing Club ⛷️",
+            "text": "WEEEEEEE",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://www.skiworld.co.uk/blog/wp-content/uploads/2021/11/Skiers-jumping.jpg"
+        },
+        "c13": {
+            "title": "Chess Club ♟️",
+            "text": "Checkmate!",
+            "telegram": "https://t.me/+FnneUNrZVB4zZWY0",
+            "whatsapp": "#",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Chess_pieces_close_up.jpg/1200px-Chess_pieces_close_up.jpg"
+        },
+        "c14": {
+            "title": "Foosball Club 🏟️",
+            "text": "My charm is very profound",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/OSuwFNbd_BLxc5tNYijQnVJCB8ZNi5Qn57RfDGWD1Z8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF6eS1QeVFqaEwu/anBn"
+        },
+        "c15": {
+            "title": "Chinese Culture Club 🪷",
+            "text": "A world you might not know",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Ma_Yuan_-_Water_Album_-_The_Yellow_River_Breaches_its_Course.jpg"
+        },
+        "c16": {
+            "title": "Food Club 🥘",
+            "text": "Smells good, come if you're hungry!",
+            "telegram": "https://t.me/+KEG5uIUzKKdiNTA8",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/mv6bQwv3nX7wNA_Q0p-EBu-ZBvQtrq_qRG0W1oy2EsI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/ZmxhdGxheS1pcm9u/LXNraWxsZXQtd2l0/aC1tZWF0LWFuZC1v/dGhlci1mb29kLmpw/Zz93aWR0aD0xMDAw/JmZvcm1hdD1wanBn/JmV4aWY9MCZpcHRj/PTA"
+        },
+        "c17": {
+            "title": "Movie Club 🎥",
+            "text": "Welcome to the world of movies!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://cdn.pixabay.com/photo/2013/11/28/10/02/camera-219958_1280.jpg"
+        },
+        "c18": {
+            "title": "Reading Club 📖",
+            "text": "Let's expand our knowledge together!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://thumbs.dreamstime.com/b/open-magical-book-contains-fantastic-stories-reading-books-literature-allows-you-to-plunge-world-imagination-295754284.jpg"
+        },
+        "c19": {
+            "title": "Music Club 🎵",
+            "text": "Let's ignite the atmosphere!",
+            "telegram": "https://t.me/+kCMv6lpd1tE3MDg0",
+            "whatsapp": "#",
+            "image": "https://imgs.search.brave.com/L6GEUph3oEL8-GOywudfE4Ne94WNydhK8UATpj7QZkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjg1/MTExOTk4L3Bob3Rv/L3lvdW5nLWdpcmwt/ZGFuY2luZy10by10/aGUtbXVzaWMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVhB/OFhHNUZ5Z2UxZVIt/NjlGZVJiWHdJajdt/VmduaHJUTERiOVRK/aHhiMjQ9"
+        },
+        "c20": {
+            "title": "Photography Club 📹",
+            "text": "Come record beautiful moments!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2lybCUyMHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        "c21": {
+            "title": "E-sports Club 🎮",
+            "text": "The ninth art! Start!",
+            "telegram": "https://t.me/+95AikB-AxuliMTI0",
+            "whatsapp": "#",
+            "image": "https://delfos.net.br/wp-content/uploads/2020/04/nier-automata-2b-9s-a2-1.jpg"
+        },
+        "c22": {
+            "title": "LoL Club 👾",
+            "text": "Demacia!",
+            "telegram": "https://t.me/joinchat/1",
+            "whatsapp": "#",
+            "image": "https://media-assets.wired.it/photos/638df6f1c05d74dd580c820d/3:2/w_1620,h_1080,c_limit/league-of-legends-cover.jpg"
+        }
+    }
+}
