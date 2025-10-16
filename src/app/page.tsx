@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { I18nProvider, useI18n } from "./components/I18nProvider";
-import { getAssetPath } from "./utils/paths";
+import { getAssetPath, getRoutePath } from "./utils/paths";
 
 function HomeInner() {
   const { strings, links } = useI18n();
@@ -108,10 +108,10 @@ function HomeInner() {
         </div>
         <div className="content__text lxgw-wenkai-tc-regular">
           <p className="buttons level-item has-text-centered">
-            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/wechatgroups/">{strings?.home?.card1?.button1 || 'Clubs'}</a>
+            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href={getRoutePath("/wechatgroups/")}>{strings?.home?.card1?.button1 || 'Clubs'}</a>
             <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="#">{strings?.home?.card1?.button2 || 'Telegram'}</a>
             <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href={links?.instagram || '#'}>{strings?.home?.card1?.button3 || 'Instagram'}</a>
-            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href="/work/">{strings?.home?.card1?.button4 || 'WIP'}</a>
+            <a className="button is-success is-medium lxgw-wenkai-tc-regular glassEffect" href={getRoutePath("/work/")}>{strings?.home?.card1?.button4 || 'WIP'}</a>
           </p>
           <p className="right" id="homeCard1Text1" style={{ color: 'black' }} dangerouslySetInnerHTML={{ __html: strings?.home?.card1?.text1 || '' }} />
           <p className="highlight" style={{ color: 'black' }}>What matters most is how the journey allows your passions to bloom, transforming you into your own firework 🎆</p>
