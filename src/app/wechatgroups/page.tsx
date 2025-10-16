@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { I18nProvider, useI18n } from "../components/I18nProvider";
 
-function WeChatGroupsInner() {
+function WeChatClubsInner() {
   const { strings } = useI18n();
   const [groups, setGroups] = useState<any[]>([]);
 
   useEffect(() => {
     // Set page title
-    document.title = "PLP | Groups";
+    document.title = "PLP | Clubs";
     
     if (strings?.groups) {
       const count = parseInt(strings.groups.count);
@@ -100,10 +100,10 @@ function WeChatGroupsInner() {
   );
 }
 
-export default function WeChatGroups() {
+export default function WeChatClubs() {
   return (
     <I18nProvider>
-      <WeChatGroupsInner />
+      <WeChatClubsInner />
     </I18nProvider>
   );
 }

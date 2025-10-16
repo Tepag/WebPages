@@ -49,7 +49,7 @@ WebPagesRefactor/
 │       ├── join-us/              # Join Us page
 │       │   ├── page.tsx          # Main Join Us component
 │       │   └── join-us-fixes.css # Page-specific styles
-│       ├── wechatgroups/          # WeChat Groups page
+│       ├── wechatgroups/          # WeChat Clubs page
 │       │   └── page.tsx
 │       ├── work/                  # Work in Progress page
 │       │   └── page.tsx
@@ -71,7 +71,7 @@ WebPagesRefactor/
 ### Pages
 - **Home**: Interactive intro grid with mouse animations
 - **Events**: Event listings with filtering
-- **WeChat Groups**: Interactive flip cards for group categories
+- **WeChat Clubs**: Interactive flip cards for club categories
 - **Join Us**: Interactive recruitment process with animated circle
 - **Work**: Placeholder for work in progress
 

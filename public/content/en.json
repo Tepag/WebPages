@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": "HOME",
-        "groups": "GROUPS",
+        "groups": "CLUBS",
         "more": "MORE",
         "instagram": "📸 Instagram",
         "rednote": "📕 Rednote",
@@ -17,7 +17,7 @@
         "card1": {
             "title": "About Us",
             "text1": "To accomplish great things, we must not only act, but also dream; not only plan, but also believe.<br>Creating, learning, and setting goals are the cornerstones of personal and professional growth. Continuous creation can inspire innovation, keep the mind active, and allow people to explore new ideas and express unique perspectives. Learning expands our knowledge and equips us to navigate a rapidly changing world. We are committed to connecting people to grow together, making university life more colorful, filled with warmth and love.",
-            "button1": "👉Groups👈",
+            "button1": "👉Clubs👈",
             "button2": "Telegram",
             "button3": "📸 Instagram",
             "button4": "Work In Progress"
