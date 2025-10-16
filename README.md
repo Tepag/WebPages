@@ -11,19 +11,16 @@ A modern Next.js application for PLP (Passion Lab Polimi) featuring interactive 
 ### Installation & Development
 
 ```bash
-# Navigate to the Next.js project
-cd next
-
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
 
-# The application will be available at http://localhost:3001
+# The application will be available at http://localhost:3000
 ```
 
-### Production Build
+### Production Build & Deployment
 
 ```bash
 # Build for production
@@ -31,12 +28,14 @@ npm run build
 
 # Start production server
 npm start
+
+# The production server will run on http://localhost:3000
 ```
 
 ## 📁 Project Structure
 
 ```
-next/
+WebPagesRefactor/
 ├── src/
 │   └── app/
 │       ├── components/           # Reusable React components
@@ -46,11 +45,14 @@ next/
 │       │   ├── RecruitmentVisualization.tsx # Interactive circle component
 │       │   └── RecruitmentText.tsx        # Text content component
 │       ├── events/               # Events page
+│       │   └── page.tsx
 │       ├── join-us/              # Join Us page
 │       │   ├── page.tsx          # Main Join Us component
 │       │   └── join-us-fixes.css # Page-specific styles
 │       ├── wechatgroups/          # WeChat Groups page
+│       │   └── page.tsx
 │       ├── work/                  # Work in Progress page
+│       │   └── page.tsx
 │       ├── globals.css            # Global styles and overrides
 │       ├── layout.tsx             # Root layout with metadata
 │       └── page.tsx               # Home page
@@ -60,7 +62,8 @@ next/
 │   ├── css/                      # Original CSS files
 │   └── js/                       # Original JavaScript files
 ├── next.config.ts                # Next.js configuration
-└── package.json                  # Dependencies and scripts
+├── package.json                  # Dependencies and scripts
+└── README.md                     # This file
 ```
 
 ## 🎨 Features
@@ -180,10 +183,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,   // Ignore TypeScript errors
   },
-  devIndicators: {
-    buildActivity: false,      // Hide build indicators
-    buildActivityPosition: 'bottom-right',
-  },
   poweredByHeader: false,      // Remove "Powered by Next.js" header
 };
 ```
@@ -215,6 +214,18 @@ NEXT_PUBLIC_ANALYTICS_ID=your_analytics_id
 
 ## 🚀 Deployment
 
+### Production Build Process
+
+For production deployment, you only need these two commands:
+
+```bash
+# 1. Build the application
+npm run build
+
+# 2. Start production server
+npm start
+```
+
 ### Vercel (Recommended)
 1. Connect your GitHub repository to Vercel
 2. Deploy automatically on push to main branch
@@ -228,6 +239,18 @@ npm run build
 # Deploy the entire project to your hosting provider
 ```
 
+### Docker Deployment
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -237,8 +260,8 @@ npm run build
 # Kill process on port 3000
 lsof -ti:3000 | xargs kill -9
 
-# Start on different port
-npm run dev -- -p 3001
+# Or use a different port
+npm start -- -p 3001
 ```
 
 #### Build Errors
