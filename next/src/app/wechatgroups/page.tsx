@@ -8,6 +8,9 @@ function WeChatGroupsInner() {
   const [groups, setGroups] = useState<any[]>([]);
 
   useEffect(() => {
+    // Set page title
+    document.title = "PLP | Groups";
+    
     if (strings?.groups) {
       const count = parseInt(strings.groups.count);
       const groupsArray = [];

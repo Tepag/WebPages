@@ -9,6 +9,9 @@ function EventsInner() {
   const [eventsNews, setEventsNews] = useState<any[]>([]);
 
   useEffect(() => {
+    // Set page title
+    document.title = "PLP | Events";
+    
     if (strings?.events) {
       // Process events cards
       if (strings.events.cards) {
