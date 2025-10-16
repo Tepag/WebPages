@@ -2,6 +2,77 @@
 body {
     padding-top: 60px !important;
 }
+
+/* CRITICAL: Navbar fixes - Load after Bulma CSS */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+}
+
+.navbar-item {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.navbar-brand .navbar-item {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.navbar-link {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.navbar-burger {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.navbar-burger span {
+    background-color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Fix About Us button to be green instead of blue */
+.button.is-primary {
+    background-color: #48c774 !important;
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.button.is-primary:hover {
+    background-color: #3fb56d !important;
+}
+
+/* Fix dropdown items */
+.navbar-dropdown .navbar-item {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.navbar-dropdown {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./assets/images/testBackground2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
