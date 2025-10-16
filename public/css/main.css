@@ -1,4 +1,7 @@
-/* Navbar fixes for visibility - More specific selectors */
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 60px !important;
+}
 #homePage .navbar.is-transparent {
     background-color: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(10px);
