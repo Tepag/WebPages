@@ -41,9 +41,10 @@ body {
 
 /* Custom React Navbar Styles */
 .custom-navbar {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(40, 40, 40, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
@@ -59,7 +60,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    height: 60px;
+    height: 80px;
 }
 
 .navbar-brand {
