@@ -233,7 +233,7 @@ const enterFullview = () => {
   // Add the Flip animation to the timeline
   tl.add(
     Flip.from(flipstate, {
-      duration: 0.5,
+      duration: 0.9,
       ease: "power4",
       absolute: true,
       onComplete: stopRendering
@@ -243,7 +243,7 @@ const enterFullview = () => {
     .to(
       grid,
       {
-        duration: 0.5,
+        duration: 0.9,
         ease: "power4",
         opacity: 0.01
       },
@@ -254,7 +254,7 @@ const enterFullview = () => {
       middleRowItemInnerImage,
       {
         scale: 1.2,
-        duration: 1.2,
+        duration: 3,
         ease: "sine"
       },
       "<-=0.45"
@@ -262,7 +262,7 @@ const enterFullview = () => {
     // Move the content up
     .to(content, {
       y: transContent, // Use the CSS variable value
-      duration: 0.5,
+      duration: 0.9,
       ease: "power4"
     });
 
