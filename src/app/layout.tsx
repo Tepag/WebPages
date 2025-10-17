@@ -44,13 +44,58 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" strategy="beforeInteractive" />
         <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" strategy="afterInteractive" />
-        <Script id="css-switcher" strategy="beforeInteractive">
+        <Script id="path-fixer" strategy="beforeInteractive">
           {`
             (function() {
               const isGitHubPages = window.location.hostname.includes('github.io');
-              const cssLink = document.getElementById('main-css');
-              if (isGitHubPages && cssLink) {
-                cssLink.href = '/css/main-github.css';
+              if (isGitHubPages) {
+                // Fix CSS paths
+                const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+                cssLinks.forEach(link => {
+                  if (link.href && link.href.startsWith(window.location.origin + '/css/')) {
+                    link.href = link.href.replace('/css/', '/WebPagesRefactor/css/');
+                  }
+                });
+                
+                // Fix favicon
+                const favicons = document.querySelectorAll('link[rel="icon"]');
+                favicons.forEach(link => {
+                  if (link.href && link.href.startsWith(window.location.origin + '/assets/')) {
+                    link.href = link.href.replace('/assets/', '/WebPagesRefactor/assets/');
+                  }
+                });
+                
+                // Fix asset paths after page load
+                function fixAssetPaths() {
+                  // Fix background images
+                  const elementsWithBgImage = document.querySelectorAll('[style*="background-image"]');
+                  elementsWithBgImage.forEach(element => {
+                    const style = element.getAttribute('style');
+                    if (style && style.includes('url(/assets/')) {
+                      const fixedStyle = style.replace(/url\(\/assets\//g, 'url(/WebPagesRefactor/assets/');
+                      element.setAttribute('style', fixedStyle);
+                    }
+                  });
+                  
+                  // Fix image src
+                  const images = document.querySelectorAll('img[src^="/assets/"]');
+                  images.forEach(img => {
+                    if (img.src.startsWith(window.location.origin + '/assets/')) {
+                      img.src = img.src.replace('/assets/', '/WebPagesRefactor/assets/');
+                    }
+                  });
+                }
+                
+                // Run immediately and after DOM is ready
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', fixAssetPaths);
+                } else {
+                  fixAssetPaths();
+                }
+                
+                // Also run after a short delay to catch dynamically loaded content
+                setTimeout(fixAssetPaths, 100);
+                setTimeout(fixAssetPaths, 500);
               }
             })();
           `}
