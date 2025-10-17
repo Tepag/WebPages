@@ -1,5 +1,5 @@
-.mainBackground {
-    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../assets/images/testBackground2.jpg");
+body {
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("./assets/images/testBackground2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,12 +8,18 @@
 }
 
 .glassEffect {
-    background: rgba(255, 255, 255, 0.17);
+    background: rgba(255, 255, 255, 0.17) !important;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(7.3px);
     border-color: rgba(0, 0, 0, 0);
+    color: white !important;
+}
+
+.glassEffect:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
 }
 
 .centerImage {
@@ -50,6 +56,6 @@ nav * {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/JoinUsBackground.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/images/JoinUsBackground.JPG");
     height: 100vh;
 }
