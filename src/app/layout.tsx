@@ -44,60 +44,74 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" strategy="beforeInteractive" />
         <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" strategy="afterInteractive" />
-        <Script id="path-fixer" strategy="beforeInteractive">
+        <Script id="path-fixer" strategy="afterInteractive">
           {`
-            (function() {
-              const isGitHubPages = window.location.hostname.includes('github.io');
-              if (isGitHubPages) {
+            console.log('Path fixer script loaded');
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            console.log('Is GitHub Pages:', isGitHubPages);
+            
+            if (isGitHubPages) {
+              function fixPaths() {
+                console.log('Fixing paths...');
+                
                 // Fix CSS paths
                 const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
-                cssLinks.forEach(link => {
-                  if (link.href && link.href.startsWith(window.location.origin + '/css/')) {
+                cssLinks.forEach((link, index) => {
+                  if (link.href && link.href.includes('/css/') && !link.href.includes('/WebPagesRefactor/')) {
+                    const oldHref = link.href;
                     link.href = link.href.replace('/css/', '/WebPagesRefactor/css/');
+                    console.log('Fixed CSS', index, ':', oldHref, '->', link.href);
                   }
                 });
                 
                 // Fix favicon
                 const favicons = document.querySelectorAll('link[rel="icon"]');
-                favicons.forEach(link => {
-                  if (link.href && link.href.startsWith(window.location.origin + '/assets/')) {
+                favicons.forEach((link, index) => {
+                  if (link.href && link.href.includes('/assets/') && !link.href.includes('/WebPagesRefactor/')) {
+                    const oldHref = link.href;
                     link.href = link.href.replace('/assets/', '/WebPagesRefactor/assets/');
+                    console.log('Fixed favicon', index, ':', oldHref, '->', link.href);
                   }
                 });
                 
-                // Fix asset paths after page load
-                function fixAssetPaths() {
-                  // Fix background images
-                  const elementsWithBgImage = document.querySelectorAll('[style*="background-image"]');
-                  elementsWithBgImage.forEach(element => {
-                    const style = element.getAttribute('style');
-                    if (style && style.includes('url(/assets/')) {
-                      const fixedStyle = style.replace(/url\(\/assets\//g, 'url(/WebPagesRefactor/assets/');
-                      element.setAttribute('style', fixedStyle);
-                    }
-                  });
-                  
-                  // Fix image src
-                  const images = document.querySelectorAll('img[src^="/assets/"]');
-                  images.forEach(img => {
-                    if (img.src.startsWith(window.location.origin + '/assets/')) {
-                      img.src = img.src.replace('/assets/', '/WebPagesRefactor/assets/');
-                    }
-                  });
-                }
+                // Fix background images
+                const elementsWithBgImage = document.querySelectorAll('[style*="background-image"]');
+                elementsWithBgImage.forEach((element, index) => {
+                  const style = element.getAttribute('style');
+                  if (style && style.includes('url(/assets/') && !style.includes('/WebPagesRefactor/')) {
+                    const oldStyle = style;
+                    const fixedStyle = style.replace(/url\(\/assets\//g, 'url(/WebPagesRefactor/assets/');
+                    element.setAttribute('style', fixedStyle);
+                    console.log('Fixed background image', index, ':', oldStyle, '->', fixedStyle);
+                  }
+                });
                 
-                // Run immediately and after DOM is ready
-                if (document.readyState === 'loading') {
-                  document.addEventListener('DOMContentLoaded', fixAssetPaths);
-                } else {
-                  fixAssetPaths();
-                }
-                
-                // Also run after a short delay to catch dynamically loaded content
-                setTimeout(fixAssetPaths, 100);
-                setTimeout(fixAssetPaths, 500);
+                // Fix image src
+                const images = document.querySelectorAll('img');
+                images.forEach((img, index) => {
+                  if (img.src && img.src.includes('/assets/') && !img.src.includes('/WebPagesRefactor/')) {
+                    const oldSrc = img.src;
+                    img.src = img.src.replace('/assets/', '/WebPagesRefactor/assets/');
+                    console.log('Fixed image', index, ':', oldSrc, '->', img.src);
+                  }
+                });
               }
-            })();
+              
+              // Run immediately
+              fixPaths();
+              
+              // Run after DOM is ready
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fixPaths);
+              } else {
+                fixPaths();
+              }
+              
+              // Run after delays to catch dynamically loaded content
+              setTimeout(fixPaths, 100);
+              setTimeout(fixPaths, 500);
+              setTimeout(fixPaths, 1000);
+            }
           `}
         </Script>
       </body>
