@@ -12,15 +12,43 @@ const I18nContext = createContext<I18nValue>({ language: "zh", strings: {}, link
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<string>(typeof window !== 'undefined' ? (localStorage.getItem('language') || 'zh') : 'zh');
-  const [strings, setStrings] = useState<any>({});
-  const [links, setLinks] = useState<any>({});
+  const [strings, setStrings] = useState<any>({
+    navbar: {
+      home: 'Home',
+      groups: 'Clubs',
+      events: 'Events',
+      more: 'More',
+      instagram: 'Instagram',
+      rednote: 'RedNote',
+      sponsor: 'Sponsor',
+      ourTeam: 'Our Team',
+      contactUs: 'Contact Us',
+      aboutUs: 'About Us',
+      joinUs: 'Join Us'
+    },
+    home: {
+      mainButton: 'About Us',
+      card1: {
+        title: 'About Us',
+        button1: 'Clubs',
+        button2: 'Telegram',
+        button3: 'Instagram',
+        button4: 'WIP',
+        text1: 'Welcome to PLP!'
+      }
+    }
+  });
+  const [links, setLinks] = useState<any>({
+    instagram: '#',
+    rednote: '#'
+  });
 
   useEffect(() => {
-    fetch(`/content/${lang}.json`).then(r => r.json()).then(setStrings).catch(() => setStrings({}));
+    fetch(`/content/${lang}.json`).then(r => r.json()).then(data => setStrings(prev => ({ ...prev, ...data }))).catch(() => {});
   }, [lang]);
 
   useEffect(() => {
-    fetch(`/content/links.json`).then(r => r.json()).then(setLinks).catch(() => setLinks({}));
+    fetch(`/content/links.json`).then(r => r.json()).then(data => setLinks(prev => ({ ...prev, ...data }))).catch(() => {});
   }, []);
 
   const value = useMemo<I18nValue>(() => ({
