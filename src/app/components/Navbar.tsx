@@ -31,17 +31,17 @@ export default function Navbar() {
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
           <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>{s.home || ''}</a>
-          <Link className="navbar-item" href="/wechatgroups">{s.groups || ''}</Link>
-          <Link className="navbar-item" href="/events">{s.events || ''}</Link>
+          <Link className="navbar-item" href={getClientRoutePath('/wechatgroups')}>{s.groups || ''}</Link>
+          <Link className="navbar-item" href={getClientRoutePath('/events')}>{s.events || ''}</Link>
           <div className="navbar-item has-dropdown is-hoverable">
-            <Link className="navbar-link" href="/work">{s.more || ''}</Link>
+            <Link className="navbar-link" href={getClientRoutePath('/work')}>{s.more || ''}</Link>
             <div className="navbar-dropdown">
               <a className="navbar-item" href={links?.instagram || '#'}>{s.instagram || ''}</a>
               <a className="navbar-item" href={links?.rednote || '#'}>{s.rednote || ''}</a>
-              <Link className="navbar-item" href="/work">{s.sponsor || ''}</Link>
-              <Link className="navbar-item" href="/work">{s.ourTeam || ''}</Link>
+              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.sponsor || ''}</Link>
+              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.ourTeam || ''}</Link>
               <hr className="navbar-divider" />
-              <Link className="navbar-item" href="/work">{s.contactUs || s.contactUS || ''}</Link>
+              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.contactUs || s.contactUS || ''}</Link>
             </div>
           </div>
         </div>
@@ -50,8 +50,8 @@ export default function Navbar() {
             <div className="buttons">
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('en'); }}>EN</a>
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('zh'); }}>中</a>
-              <a className="button is-primary" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}><strong>{s.aboutUs || ''}</strong></a>
-              <Link className="button is-light" href="/join-us">{s.joinUs || ''}</Link>
+              <a className="button is-primary" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}><strong>{s.aboutUs || ''}</strong></a>
+              <Link className="button is-light" href={getClientRoutePath('/join-us')}>{s.joinUs || ''}</Link>
             </div>
           </div>
         </div>
