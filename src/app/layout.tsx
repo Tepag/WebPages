@@ -43,7 +43,6 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" strategy="beforeInteractive" />
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" strategy="beforeInteractive" />
-        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" strategy="afterInteractive" />
         <Script id="path-fixer" strategy="beforeInteractive">
           {`
             console.log('Path fixer script loaded');
@@ -63,6 +62,28 @@ export default function RootLayout({
                     if (name === 'href' && value && value.includes('/css/') && !value.includes('/WebPagesRefactor/')) {
                       value = value.replace('/css/', '/WebPagesRefactor/css/');
                       console.log('Intercepted CSS link:', value);
+                    }
+                    return originalSetAttribute.call(this, name, value);
+                  };
+                }
+                
+                if (tagName.toLowerCase() === 'img') {
+                  const originalSetAttribute = element.setAttribute;
+                  element.setAttribute = function(name, value) {
+                    if (name === 'src' && value && value.includes('/assets/') && !value.includes('/WebPagesRefactor/')) {
+                      value = value.replace('/assets/', '/WebPagesRefactor/assets/');
+                      console.log('Intercepted image src:', value);
+                    }
+                    return originalSetAttribute.call(this, name, value);
+                  };
+                }
+                
+                if (tagName.toLowerCase() === 'script') {
+                  const originalSetAttribute = element.setAttribute;
+                  element.setAttribute = function(name, value) {
+                    if (name === 'src' && value && value.includes('/_next/') && !value.includes('/WebPagesRefactor/')) {
+                      value = value.replace('/_next/', '/WebPagesRefactor/_next/');
+                      console.log('Intercepted script src:', value);
                     }
                     return originalSetAttribute.call(this, name, value);
                   };
