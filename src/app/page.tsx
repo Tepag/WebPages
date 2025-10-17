@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import Navbar from "./components/Navbar";
-import { I18nProvider, useI18n } from "./components/I18nProvider";
+import { useI18n } from "./components/I18nProvider";
 import { getClientAssetPath, getClientRoutePath } from "./utils/paths";
 
 function HomeInner() {
@@ -106,9 +105,5 @@ function HomeInner() {
 }
 
 export default function Home() {
-  return (
-    <I18nProvider>
-      <HomeInner />
-    </I18nProvider>
-  );
+  return <HomeInner />;
 }

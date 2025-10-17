@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import I18nProvider from "./components/I18nProvider";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -39,7 +41,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/vendor/event.css" />
       </head>
       <body className="lxgw-wenkai-tc-regular" style={{ backgroundColor: 'black' }}>
-        {children}
+        <I18nProvider>
+          <Navbar />
+          {children}
+        </I18nProvider>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" strategy="beforeInteractive" />
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" strategy="beforeInteractive" />
