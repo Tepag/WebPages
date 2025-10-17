@@ -569,6 +569,25 @@ body {
   padding: 3rem !important;
 }
 
+/* Button spacing for homepage buttons */
+.buttons {
+  display: flex !important;
+  gap: 1rem !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.buttons .button {
+  margin: 0 !important;
+}
+
+.level-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 /* Join Us page background */
 .joinUsBackground {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
