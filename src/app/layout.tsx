@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "PLP | Home",
   description: "PLP - Professional Learning Platform",
   icons: {
-    icon: "./assets/images/logo.png",
+    icon: "/assets/images/logo.png",
   },
 };
 
@@ -31,12 +31,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet" />
-        <link rel="icon" href="./assets/images/logo.png" />
-        <link rel="stylesheet" href="./css/main-local.css" id="main-css" />
-        <link rel="stylesheet" href="./css/vendor/introgridsection.css" />
-        <link rel="stylesheet" href="./css/vendor/joinUs.css" />
-        <link rel="stylesheet" href="./css/vendor/purecssflipcard.css" />
-        <link rel="stylesheet" href="./css/vendor/event.css" />
+        <link rel="icon" href="/assets/images/logo.png" />
+        <link rel="stylesheet" href="/css/main-local.css" id="main-css" />
+        <link rel="stylesheet" href="/css/vendor/introgridsection.css" />
+        <link rel="stylesheet" href="/css/vendor/joinUs.css" />
+        <link rel="stylesheet" href="/css/vendor/purecssflipcard.css" />
+        <link rel="stylesheet" href="/css/vendor/event.css" />
       </head>
       <body className="lxgw-wenkai-tc-regular" style={{ backgroundColor: 'black' }}>
         {children}
@@ -50,7 +50,7 @@ export default function RootLayout({
               const isGitHubPages = window.location.hostname.includes('github.io');
               const cssLink = document.getElementById('main-css');
               if (isGitHubPages && cssLink) {
-                cssLink.href = './css/main-github.css';
+                cssLink.href = '/css/main-github.css';
               }
             })();
           `}
