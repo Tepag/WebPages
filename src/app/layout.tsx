@@ -44,11 +44,33 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" strategy="beforeInteractive" />
         <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" strategy="afterInteractive" />
-        <Script id="path-fixer" strategy="afterInteractive">
+        <Script id="path-fixer" strategy="beforeInteractive">
           {`
             console.log('Path fixer script loaded');
             const isGitHubPages = window.location.hostname.includes('github.io');
             console.log('Is GitHub Pages:', isGitHubPages);
+            
+            // Intercept and fix resource requests immediately
+            if (isGitHubPages) {
+              // Override document.createElement to fix paths as elements are created
+              const originalCreateElement = document.createElement;
+              document.createElement = function(tagName) {
+                const element = originalCreateElement.call(this, tagName);
+                
+                if (tagName.toLowerCase() === 'link') {
+                  const originalSetAttribute = element.setAttribute;
+                  element.setAttribute = function(name, value) {
+                    if (name === 'href' && value && value.includes('/css/') && !value.includes('/WebPagesRefactor/')) {
+                      value = value.replace('/css/', '/WebPagesRefactor/css/');
+                      console.log('Intercepted CSS link:', value);
+                    }
+                    return originalSetAttribute.call(this, name, value);
+                  };
+                }
+                
+                return element;
+              };
+            }
             
             if (isGitHubPages) {
               function fixPaths() {
