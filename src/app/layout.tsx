@@ -80,7 +80,7 @@ export default function RootLayout({
                   const style = element.getAttribute('style');
                   if (style && style.includes('url(/assets/') && !style.includes('/WebPagesRefactor/')) {
                     const oldStyle = style;
-                    const fixedStyle = style.replace(/url\(\/assets\//g, 'url(/WebPagesRefactor/assets/');
+                    const fixedStyle = style.split('url(/assets/').join('url(/WebPagesRefactor/assets/');
                     element.setAttribute('style', fixedStyle);
                     console.log('Fixed background image', index, ':', oldStyle, '->', fixedStyle);
                   }
