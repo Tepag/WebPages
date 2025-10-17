@@ -355,6 +355,13 @@ body {
   transform: translateY(0) !important;
 }
 
+/* Show dropdown when active via click */
+.custom-navbar .navbar-dropdown-container:has(.navbar-dropdown.active) .navbar-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
 /* Dropdown arrow styles */
 .custom-navbar .navbar-dropdown-container .dropdown-arrow {
   display: block !important;
@@ -362,7 +369,7 @@ body {
 }
 
 .custom-navbar .navbar-dropdown-container:hover .dropdown-arrow,
-.custom-navbar .navbar-dropdown.active ~ .dropdown-arrow {
+.custom-navbar .navbar-dropdown-container:has(.navbar-dropdown.active) .dropdown-arrow {
   transform: rotate(180deg) !important;
 }
 
@@ -371,6 +378,34 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
   transform: translateY(0) !important;
+}
+
+/* Dropdown items */
+.custom-navbar .dropdown-item {
+  display: block !important;
+  padding: 0.75rem 1rem !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  transition: all 0.2s ease !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-navbar .dropdown-item:last-child {
+  border-bottom: none !important;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #f0f0f0 !important;
+  transform: translateX(4px) !important;
+}
+
+.custom-navbar .dropdown-divider {
+  height: 1px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  margin: 0.5rem 0 !important;
 }
 
 /* Add padding-top to all pages to account for fixed navbar */
