@@ -225,7 +225,7 @@ body {
 .navbar-buttons {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .lang-button {
