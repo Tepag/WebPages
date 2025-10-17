@@ -81,7 +81,11 @@ export default function Navbar() {
             >
               <button 
                 className="navbar-dropdown-trigger"
-                onClick={toggleDropdown}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleDropdown();
+                }}
                 onMouseEnter={() => setIsDropdownOpen(true)}
               >
                 {s.more || 'MORE'}
