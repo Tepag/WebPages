@@ -19,6 +19,11 @@ export default function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = getClientRoutePath('/');
+  };
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -38,14 +43,14 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo and Brand */}
         <div className="navbar-brand">
-          <Link href={getClientRoutePath('/')} className="brand-link">
+          <a href={getClientRoutePath('/')} className="brand-link" onClick={handleHomeClick}>
             <img 
               src={getClientAssetPath('/assets/images/logo.png')} 
               alt="PLP Logo" 
               className="brand-logo"
             />
             <span className="brand-text">PLP</span>
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -62,9 +67,9 @@ export default function Navbar() {
         {/* Navigation Menu */}
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <div className="navbar-start">
-            <Link href={getClientRoutePath('/')} className="navbar-item">
+            <a href={getClientRoutePath('/')} className="navbar-item" onClick={handleHomeClick}>
               {s.home || 'HOME'}
-            </Link>
+            </a>
             <Link href={getClientRoutePath('/wechatgroups')} className="navbar-item">
               {s.groups || 'CLUBS'}
             </Link>
@@ -129,9 +134,9 @@ export default function Navbar() {
               >
                 中
               </button>
-              <Link href={getClientRoutePath('/')} className="primary-button">
+              <a href={getClientRoutePath('/')} className="primary-button" onClick={handleHomeClick}>
                 <strong>{s.aboutUs || 'About Us'}</strong>
-              </Link>
+              </a>
               <Link href={getClientRoutePath('/join-us')} className="secondary-button">
                 {s.joinUs || 'Join Us'}
               </Link>
