@@ -374,31 +374,13 @@ body {
 
 /* Join Us page background */
 .joinUsBackground {
-  background-image: url('/assets/images/JoinUsBackground.JPG') !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('/assets/images/JoinUsBackground.JPG') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
   position: relative !important;
-}
-
-/* Dark overlay for Join Us background */
-.joinUsBackground::before {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: rgba(0, 0, 0, 0.4) !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
-}
-
-/* Ensure content is above the overlay */
-.joinUsBackground > * {
-  position: relative !important;
-  z-index: 2 !important;
 }
 
 /* Job Categories title - make it black with glass effect */
