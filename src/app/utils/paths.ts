@@ -14,7 +14,9 @@ export const getClientAssetPath = (path: string): string => {
   if (typeof window !== 'undefined') {
     // In produzione su GitHub Pages, aggiungi il base path
     if (window.location.hostname.includes('github.io')) {
-      return `/WebPagesRefactor${path}`;
+      // Assicurati che il path inizi con /
+      const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+      return `/WebPagesRefactor${normalizedPath}`;
     }
   }
   return path;
@@ -24,7 +26,9 @@ export const getClientRoutePath = (path: string): string => {
   if (typeof window !== 'undefined') {
     // In produzione su GitHub Pages, aggiungi il base path
     if (window.location.hostname.includes('github.io')) {
-      return `/WebPagesRefactor${path}`;
+      // Assicurati che il path inizi con /
+      const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+      return `/WebPagesRefactor${normalizedPath}`;
     }
   }
   return path;

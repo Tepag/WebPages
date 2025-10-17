@@ -44,11 +44,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    fetch(`/content/${lang}.json`).then(r => r.json()).then(data => setStrings(prev => ({ ...prev, ...data }))).catch(() => {});
+    const basePath = typeof window !== 'undefined' && window.location.hostname.includes('github.io') ? '/WebPagesRefactor' : '';
+    fetch(`${basePath}/content/${lang}.json`).then(r => r.json()).then(data => setStrings(prev => ({ ...prev, ...data }))).catch(() => {});
   }, [lang]);
 
   useEffect(() => {
-    fetch(`/content/links.json`).then(r => r.json()).then(data => setLinks(prev => ({ ...prev, ...data }))).catch(() => {});
+    const basePath = typeof window !== 'undefined' && window.location.hostname.includes('github.io') ? '/WebPagesRefactor' : '';
+    fetch(`${basePath}/content/links.json`).then(r => r.json()).then(data => setLinks(prev => ({ ...prev, ...data }))).catch(() => {});
   }, []);
 
   const value = useMemo<I18nValue>(() => ({

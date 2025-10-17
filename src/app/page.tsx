@@ -11,7 +11,7 @@ function HomeInner() {
     document.body.classList.add('noscroll');
     
     const script = document.createElement('script');
-    script.src = getClientAssetPath('./js/vendor/introgridsection.js');
+    script.src = getClientAssetPath('/js/vendor/introgridsection.js');
     script.async = true;
     document.body.appendChild(script);
     
@@ -31,7 +31,7 @@ function HomeInner() {
             {['6-min.jpg','7-min.jpg','8-min.jpg'].map((img) => (
               <div className="row__item" key={img}>
                 <div className="row__item-inner">
-                  <div className="row__item-img" style={{ backgroundImage: `url(${getClientAssetPath(`./assets/images/${img}`)})` }} />
+                  <div className="row__item-img" style={{ backgroundImage: `url(${getClientAssetPath(`/assets/images/${img}`)})` }} />
                 </div>
               </div>
             ))}
