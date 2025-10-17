@@ -1,57 +1,117 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import { useI18n } from "./I18nProvider";
 import { getClientAssetPath, getClientRoutePath } from "../utils/paths";
 
 export default function Navbar() {
   const { strings, links, setLang } = useI18n();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const s = strings?.navbar || {};
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>
-          <figure className="image" style={{ maxWidth: '40px' }}>
-            <img className="is-rounded is-square" src={getClientAssetPath('/assets/images/logo.png')} alt="icon" />
-          </figure>
-          <b>PLP</b>
-        </a>
-        <a role="button" className="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false"
-          onClick={() => {
-            const burger = document.querySelector('.navbar-burger');
-            const menu = document.getElementById('navMenu');
-            burger?.classList.toggle('is-active');
-            menu?.classList.toggle('is-active');
-          }}>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div className="navbar-menu" id="navMenu">
-        <div className="navbar-start">
-          <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>{s.home || ''}</a>
-          <Link className="navbar-item" href={getClientRoutePath('/wechatgroups')}>{s.groups || ''}</Link>
-          <Link className="navbar-item" href={getClientRoutePath('/events')}>{s.events || ''}</Link>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <Link className="navbar-link" href={getClientRoutePath('/work')}>{s.more || ''}</Link>
-            <div className="navbar-dropdown">
-              <a className="navbar-item" href={links?.instagram || '#'}>{s.instagram || ''}</a>
-              <a className="navbar-item" href={links?.rednote || '#'}>{s.rednote || ''}</a>
-              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.sponsor || ''}</Link>
-              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.ourTeam || ''}</Link>
-              <hr className="navbar-divider" />
-              <Link className="navbar-item" href={getClientRoutePath('/work')}>{s.contactUs || s.contactUS || ''}</Link>
+    <nav className="custom-navbar">
+      <div className="navbar-container">
+        {/* Logo and Brand */}
+        <div className="navbar-brand">
+          <Link href={getClientRoutePath('/')} className="brand-link">
+            <img 
+              src={getClientAssetPath('/assets/images/logo.png')} 
+              alt="PLP Logo" 
+              className="brand-logo"
+            />
+            <span className="brand-text">PLP</span>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className={`mobile-menu-button ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Navigation Menu */}
+        <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+          <div className="navbar-start">
+            <Link href={getClientRoutePath('/')} className="navbar-item">
+              {s.home || 'HOME'}
+            </Link>
+            <Link href={getClientRoutePath('/wechatgroups')} className="navbar-item">
+              {s.groups || 'CLUBS'}
+            </Link>
+            <Link href={getClientRoutePath('/events')} className="navbar-item">
+              {s.events || 'EVENTS'}
+            </Link>
+            
+            {/* Dropdown Menu */}
+            <div className="navbar-dropdown-container">
+              <button 
+                className="navbar-dropdown-trigger"
+                onClick={toggleDropdown}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                {s.more || 'MORE'}
+                <svg className="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8">
+                  <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" fill="none"/>
+                </svg>
+              </button>
+              
+              <div className={`navbar-dropdown ${isDropdownOpen ? 'active' : ''}`}>
+                <a href={links?.instagram || '#'} className="dropdown-item">
+                  {s.instagram || 'Instagram'}
+                </a>
+                <a href={links?.rednote || '#'} className="dropdown-item">
+                  {s.rednote || 'RedNote'}
+                </a>
+                <Link href={getClientRoutePath('/work')} className="dropdown-item">
+                  {s.sponsor || 'Sponsor'}
+                </Link>
+                <Link href={getClientRoutePath('/work')} className="dropdown-item">
+                  {s.ourTeam || 'Our Team'}
+                </Link>
+                <div className="dropdown-divider"></div>
+                <Link href={getClientRoutePath('/work')} className="dropdown-item">
+                  {s.contactUs || 'Contact Us'}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-              <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('en'); }}>EN</a>
-              <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('zh'); }}>中</a>
-              <a className="button is-primary" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}><strong>{s.aboutUs || ''}</strong></a>
-              <Link className="button is-light" href={getClientRoutePath('/join-us')}>{s.joinUs || ''}</Link>
+
+          <div className="navbar-end">
+            <div className="navbar-buttons">
+              <button 
+                className="lang-button"
+                onClick={() => setLang('en')}
+              >
+                EN
+              </button>
+              <button 
+                className="lang-button"
+                onClick={() => setLang('zh')}
+              >
+                中
+              </button>
+              <Link href={getClientRoutePath('/')} className="primary-button">
+                <strong>{s.aboutUs || 'About Us'}</strong>
+              </Link>
+              <Link href={getClientRoutePath('/join-us')} className="secondary-button">
+                {s.joinUs || 'Join Us'}
+              </Link>
             </div>
           </div>
         </div>
