@@ -23,7 +23,6 @@ function HomeInner() {
   }, []);
   return (
     <div id="homePage">
-    <Navbar />
     <main>
       <section className="intro">
         <div className="grid">
