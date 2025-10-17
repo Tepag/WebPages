@@ -10,7 +10,7 @@ function HomeInner() {
     document.body.classList.add('noscroll');
     
     const script = document.createElement('script');
-    script.src = '/js/vendor/introgridsection.js';
+    script.src = './js/vendor/introgridsection.js';
     script.async = true;
     document.body.appendChild(script);
     
@@ -30,7 +30,7 @@ function HomeInner() {
             {['6-min.jpg','7-min.jpg','8-min.jpg'].map((img) => (
               <div className="row__item" key={img}>
                 <div className="row__item-inner">
-                  <div className="row__item-img" style={{ backgroundImage: `url(/assets/images/${img})` }} />
+                  <div className="row__item-img" style={{ backgroundImage: `url(./assets/images/${img})` }} />
                 </div>
               </div>
             ))}
@@ -39,7 +39,7 @@ function HomeInner() {
             {['10.jpg.webp','11-min.jpg','12-min.jpg','13-min.jpg','14.avif','15-min.jpg'].map((img) => (
               <div className="row__item" key={img}>
                 <div className="row__item-inner">
-                  <div className="row__item-img" style={{ backgroundImage: `url(/assets/images/${img})` }} />
+                  <div className="row__item-img" style={{ backgroundImage: `url(./assets/images/${img})` }} />
                 </div>
               </div>
             ))}
@@ -76,7 +76,7 @@ function HomeInner() {
         <div className="enter glassEffect has-text-centered">
           <span className="container">
             <figure className="image is-128x128 centerImage">
-              <img className="is-rounded is-1by1" src="/assets/images/logo.png" />
+              <img className="is-rounded is-1by1" src="./assets/images/logo.png" />
             </figure>
             <p className="title centerImage" style={{ marginTop: '5%', marginBottom: '3%', color: 'aliceblue' }}>Passion Lab Polimi</p>
             <p className="subtitle centerImage lxgw-wenkai-tc-regular" style={{ color: 'rgb(221, 221, 221)' }}>where passion sprout</p>
