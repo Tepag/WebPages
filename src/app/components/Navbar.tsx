@@ -61,17 +61,17 @@ export default function Navbar() {
             <div className="navbar-dropdown-container">
               <button 
                 className="navbar-dropdown-trigger"
-                onClick={toggleDropdown}
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 {s.more || 'MORE'}
-                <svg className="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8">
-                  <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" fill="none"/>
-                </svg>
               </button>
               
-              <div className={`navbar-dropdown ${isDropdownOpen ? 'active' : ''}`}>
+              <div 
+                className={`navbar-dropdown ${isDropdownOpen ? 'active' : ''}`}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 <a href={links?.instagram || '#'} className="dropdown-item">
                   {s.instagram || 'Instagram'}
                 </a>

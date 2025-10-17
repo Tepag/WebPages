@@ -356,3 +356,12 @@ body {
   transform: translateY(0) !important;
 }
 
+/* Join Us page background */
+.joinUsBackground {
+  background-image: url('/assets/images/JoinUsBackground.JPG') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+

@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import { I18nProvider, useI18n } from "../components/I18nProvider";
+import { useI18n } from "../components/I18nProvider";
 import RecruitmentProcess from "../components/RecruitmentProcess";
 import RecruitmentVisualization from "../components/RecruitmentVisualization";
 import RecruitmentText from "../components/RecruitmentText";
@@ -13,11 +12,17 @@ function JoinUsInner() {
   useEffect(() => {
     // Set page title
     document.title = "PLP | Join Us";
+    
+    // Add background class to body
+    document.body.classList.add('joinUsBackground');
+    
+    return () => {
+      document.body.classList.remove('joinUsBackground');
+    };
   }, []);
 
   return (
-    <>
-      <Navbar />
+    <div className="joinUsBackground">
       <RecruitmentProcess />
       
       <section className="hero is-small" style={{ marginTop: '2%', marginBottom: '2%' }}>
@@ -47,14 +52,10 @@ function JoinUsInner() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
 export default function JoinUs() {
-  return (
-    <I18nProvider>
-      <JoinUsInner />
-    </I18nProvider>
-  );
+  return <JoinUsInner />;
 }
