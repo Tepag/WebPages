@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>
-          <figure className="image" style={{ maxWidth: '20px' }}>
+          <figure className="image" style={{ maxWidth: '40px' }}>
             <img className="is-rounded is-square" src={getClientAssetPath('/assets/images/logo.png')} alt="icon" />
           </figure>
           <b>PLP</b>
