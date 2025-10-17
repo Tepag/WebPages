@@ -381,9 +381,16 @@ body {
   min-height: 100vh !important;
 }
 
-/* Job Categories title - make it black */
+/* Job Categories title - make it black with glass effect */
 #joinUsTitle {
   color: black !important;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 1rem 2rem !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  display: inline-block !important;
 }
 
