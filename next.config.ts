@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // GitHub Pages configuration
+  basePath: process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : '',
 };
 
 export default nextConfig;

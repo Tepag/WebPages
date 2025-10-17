@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../assets/images/testBackground2.jpg");
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/WebPagesRefactor/assets/images/testBackground2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,6 +56,6 @@ nav * {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/JoinUsBackground.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/WebPagesRefactor/assets/images/JoinUsBackground.JPG");
     height: 100vh;
 }

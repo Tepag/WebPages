@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useI18n } from "./I18nProvider";
+import { getClientAssetPath, getClientRoutePath } from "../utils/paths";
 
 export default function Navbar() {
   const { strings, links, setLang } = useI18n();
@@ -8,9 +9,9 @@ export default function Navbar() {
   return (
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>
+        <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>
           <figure className="image" style={{ maxWidth: '20px' }}>
-            <img className="is-rounded is-square" src="/assets/images/logo.png" alt="icon" />
+            <img className="is-rounded is-square" src={getClientAssetPath('/assets/images/logo.png')} alt="icon" />
           </figure>
           <b>PLP</b>
         </a>
@@ -29,7 +30,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
-          <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>{s.home || ''}</a>
+          <a className="navbar-item" href={getClientRoutePath('/')} onClick={(e) => { e.preventDefault(); window.location.href = getClientRoutePath('/'); }}>{s.home || ''}</a>
           <Link className="navbar-item" href="/wechatgroups">{s.groups || ''}</Link>
           <Link className="navbar-item" href="/events">{s.events || ''}</Link>
           <div className="navbar-item has-dropdown is-hoverable">
