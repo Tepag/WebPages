@@ -1,5 +1,6 @@
 
-body {
+/* Body styles moved to globals.css to avoid conflicts */
+.dancing-text {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     animation: party-time 1.3s infinite;
   }

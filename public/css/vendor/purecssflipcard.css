@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 
-body {
+/* Body styles moved to globals.css to avoid conflicts */
+.flip-card-container {
   text-align: center;
   font-family: "LXGW WenKai TC", cursive;
 }

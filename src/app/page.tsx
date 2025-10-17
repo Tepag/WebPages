@@ -21,7 +21,7 @@ function HomeInner() {
     };
   }, []);
   return (
-    <div id="homePage">
+    <div id="homePage" className="intro-section">
     <main>
       <section className="intro">
         <div className="grid">

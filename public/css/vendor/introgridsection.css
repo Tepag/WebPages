@@ -20,7 +20,8 @@
   --trans-content: -30vh;
 }
 
-body {
+/* Body styles moved to globals.css to avoid conflicts */
+.intro-section {
   margin: 0;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -267,7 +268,7 @@ a:focus-visible {
 }
 
 @media screen and (min-width: 53em) {
-  body {
+  .intro-section {
     --page-padding: 2rem 3rem;
   }
   .content__header h2 {

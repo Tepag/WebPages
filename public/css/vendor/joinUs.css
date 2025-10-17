@@ -2,10 +2,13 @@
 /*
 正真的大佬，源代码的创作者 -> https://codepen.io/mikel301292/pen/xpoaGy <- 有机会支持下！💪
 */
-html,
-body {
+/* Body styles moved to globals.css to avoid conflicts */
+html {
   padding: 0;
   margin: 0;
+}
+
+.joinUsBackground {
   font-family: sans-serif;
   color: #fff;
 }
