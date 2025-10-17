@@ -6,29 +6,21 @@ export default function RecruitmentProcess() {
     // Add joinUsBackground class to body for styling
     document.body.classList.add('joinUsBackground');
     
-    let script: HTMLScriptElement | null = null;
     let retryCount = 0;
     const maxRetries = 50; // 5 seconds max wait time
     
-    // Wait for jQuery to be available before loading joinUs.js
+    // Wait for jQuery to be available before initializing recruitment process
     const loadJoinUsScript = () => {
       if (typeof window !== 'undefined' && (window as any).$ && (window as any).jQuery) {
-        script = document.createElement('script');
-        script.src = '/js/vendor/joinUs.js';
-        script.async = true;
-        
-        // Add onload handler to ensure the script runs after DOM is ready
-        script.onload = () => {
-          console.log('JoinUs script loaded successfully');
-          // Manually trigger the recruitment process initialization
-          setTimeout(() => {
-            // Execute the recruitment process directly
-            if ((window as any).$ && document.querySelector(".ring-bg")) {
-              console.log('Initializing recruitment process...');
-              // Call the createRecruitmentProcess function directly
-              (window as any).$(document).ready(() => {
-                // Re-create the recruitment process logic inline
-                const createRecruitmentProcess = () => {
+        // Execute the recruitment process directly without loading external script
+        setTimeout(() => {
+          // Execute the recruitment process directly
+          if ((window as any).$ && document.querySelector(".ring-bg")) {
+            console.log('Initializing recruitment process...');
+            // Call the createRecruitmentProcess function directly
+            (window as any).$(document).ready(() => {
+              // Re-create the recruitment process logic inline
+              const createRecruitmentProcess = () => {
                   const path = document.querySelector(".ring-bg") as SVGPathElement;
                   if (!path) return;
                   
@@ -221,13 +213,10 @@ export default function RecruitmentProcess() {
                   });
                 };
 
-                createRecruitmentProcess();
-              });
-            }
-          }, 200);
-        };
-        
-        document.body.appendChild(script);
+              createRecruitmentProcess();
+            });
+          }
+        }, 200);
       } else if (retryCount < maxRetries) {
         retryCount++;
         setTimeout(loadJoinUsScript, 100);
@@ -242,10 +231,6 @@ export default function RecruitmentProcess() {
     return () => {
       // Remove joinUsBackground class when leaving page
       document.body.classList.remove('joinUsBackground');
-      
-      if (script && document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
     };
   }, []);
 
