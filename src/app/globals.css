@@ -355,9 +355,15 @@ body {
   transform: translateY(0) !important;
 }
 
-/* Hide dropdown arrow on desktop */
+/* Dropdown arrow styles */
 .custom-navbar .navbar-dropdown-container .dropdown-arrow {
-  display: none !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.custom-navbar .navbar-dropdown-container:hover .dropdown-arrow,
+.custom-navbar .navbar-dropdown.active ~ .dropdown-arrow {
+  transform: rotate(180deg) !important;
 }
 
 /* Ensure dropdown works on hover for desktop */

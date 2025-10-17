@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useI18n } from "./I18nProvider";
 import { getClientAssetPath, getClientRoutePath } from "../utils/paths";
 
@@ -8,6 +8,7 @@ export default function Navbar() {
   const { strings, links, setLang } = useI18n();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const s = strings?.navbar || {};
 
   const toggleMenu = () => {
@@ -17,6 +18,20 @@ export default function Navbar() {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="custom-navbar">
@@ -58,20 +73,24 @@ export default function Navbar() {
             </Link>
             
             {/* Dropdown Menu */}
-            <div className="navbar-dropdown-container">
+            <div 
+              ref={dropdownRef}
+              className="navbar-dropdown-container"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
               <button 
                 className="navbar-dropdown-trigger"
+                onClick={toggleDropdown}
                 onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 {s.more || 'MORE'}
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
               
-              <div 
-                className={`navbar-dropdown ${isDropdownOpen ? 'active' : ''}`}
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
-              >
+              <div className={`navbar-dropdown ${isDropdownOpen ? 'active' : ''}`}>
                 <a href={links?.instagram || '#'} className="dropdown-item">
                   {s.instagram || 'Instagram'}
                 </a>
