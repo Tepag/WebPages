@@ -219,14 +219,12 @@ The project includes a GitHub Actions workflow for automatic deployment:
 
 1. **Enable GitHub Pages**: Go to your repository Settings → Pages
 2. **Set Source**: Select "GitHub Actions" as the source
-3. **Set Permissions**: Go to Settings → Actions → General → Workflow permissions → "Read and write permissions"
-4. **Push to main**: The workflow will automatically build and deploy
+3. **Push to main**: The workflow will automatically build and deploy
 
 The workflow file is located at `.github/workflows/deploy.yml` and will:
 - Build the static site using `npm run build`
-- Deploy to GitHub Pages automatically using the official GitHub Pages actions
+- Deploy to GitHub Pages automatically
 - Work on every push to the `main` branch
-- Use proper permissions and environment setup
 
 ### Production Build Process
 

@@ -1,6 +1,6 @@
 "use client";
+import Link from "next/link";
 import { useI18n } from "./I18nProvider";
-import { getAssetPath, getRoutePath } from "../utils/paths";
 
 export default function Navbar() {
   const { strings, links, setLang } = useI18n();
@@ -8,9 +8,9 @@ export default function Navbar() {
   return (
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href={getRoutePath("/")}>
+        <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>
           <figure className="image" style={{ maxWidth: '20px' }}>
-            <img className="is-rounded is-square" src={getAssetPath("/assets/images/logo.png")} alt="icon" />
+            <img className="is-rounded is-square" src="/assets/images/logo.png" alt="icon" />
           </figure>
           <b>PLP</b>
         </a>
@@ -29,18 +29,18 @@ export default function Navbar() {
       </div>
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-start">
-        <a className="navbar-item" href={getRoutePath("/")}>{s.home || ''}</a>
-        <a className="navbar-item" href={getRoutePath("/wechatgroups/")}>{s.groups || ''}</a>
-        <a className="navbar-item" href={getRoutePath("/events/")}>{s.events || ''}</a>
-        <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link" href={getRoutePath("/work/")}>{s.more || ''}</a>
+          <a className="navbar-item" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>{s.home || ''}</a>
+          <Link className="navbar-item" href="/wechatgroups">{s.groups || ''}</Link>
+          <Link className="navbar-item" href="/events">{s.events || ''}</Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <Link className="navbar-link" href="/work">{s.more || ''}</Link>
             <div className="navbar-dropdown">
               <a className="navbar-item" href={links?.instagram || '#'}>{s.instagram || ''}</a>
               <a className="navbar-item" href={links?.rednote || '#'}>{s.rednote || ''}</a>
-              <a className="navbar-item" href={getRoutePath("/work/")}>{s.sponsor || ''}</a>
-              <a className="navbar-item" href={getRoutePath("/work/")}>{s.ourTeam || ''}</a>
+              <Link className="navbar-item" href="/work">{s.sponsor || ''}</Link>
+              <Link className="navbar-item" href="/work">{s.ourTeam || ''}</Link>
               <hr className="navbar-divider" />
-              <a className="navbar-item" href={getRoutePath("/work/")}>{s.contactUs || s.contactUS || ''}</a>
+              <Link className="navbar-item" href="/work">{s.contactUs || s.contactUS || ''}</Link>
             </div>
           </div>
         </div>
@@ -49,8 +49,8 @@ export default function Navbar() {
             <div className="buttons">
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('en'); }}>EN</a>
               <a className="button is-dark" href="#" onClick={(e) => { e.preventDefault(); setLang('zh'); }}>中</a>
-              <a className="button is-primary" href={getRoutePath("/")}><strong>{s.aboutUs || ''}</strong></a>
-              <a className="button is-light" href={getRoutePath("/join-us/")}>{s.joinUs || ''}</a>
+              <a className="button is-primary" href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}><strong>{s.aboutUs || ''}</strong></a>
+              <Link className="button is-light" href="/join-us">{s.joinUs || ''}</Link>
             </div>
           </div>
         </div>

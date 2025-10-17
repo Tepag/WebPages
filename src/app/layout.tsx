@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { getAssetPath } from "./utils/paths";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   title: "PLP | Home",
   description: "PLP - Professional Learning Platform",
   icons: {
-    icon: getAssetPath("/assets/images/logo.png"),
+    icon: "/assets/images/logo.png",
   },
 };
 
@@ -32,12 +31,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet" />
-        <link rel="icon" href={getAssetPath("/assets/images/logo.png")} />
-        <link rel="stylesheet" href={getAssetPath("/css/main.css")} />
-        <link rel="stylesheet" href={getAssetPath("/css/vendor/introgridsection.css")} />
-        <link rel="stylesheet" href={getAssetPath("/css/vendor/joinUs.css")} />
-        <link rel="stylesheet" href={getAssetPath("/css/vendor/purecssflipcard.css")} />
-        <link rel="stylesheet" href={getAssetPath("/css/vendor/event.css")} />
+        <link rel="icon" href="/assets/images/logo.png" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/vendor/introgridsection.css" />
+        <link rel="stylesheet" href="/css/vendor/joinUs.css" />
+        <link rel="stylesheet" href="/css/vendor/purecssflipcard.css" />
+        <link rel="stylesheet" href="/css/vendor/event.css" />
       </head>
       <body className="lxgw-wenkai-tc-regular" style={{ backgroundColor: 'black' }}>
         {children}

@@ -13,11 +13,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Ensure proper static export
-  distDir: 'out',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : '',
-  // Add base path for GitHub Pages subdirectory deployment
-  basePath: process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : '',
 };
 
 export default nextConfig;
