@@ -24,6 +24,7 @@ body {
   background-image: none !important;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: 65px !important;
 }
 
 /* About Us text colors */
@@ -589,10 +590,7 @@ body {
   margin: 0.5rem 0 !important;
 }
 
-/* Add padding-top to all pages to account for fixed navbar */
-body {
-  padding-top: 65px !important;
-}
+/* Add padding-top to all pages to account for fixed navbar - moved to main body selector above */
 
 /* Replace Bulma classes with custom CSS */
 .container {
