@@ -1,18 +1,34 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
+import PillNav from '../../components/PillNav'
+import { logo } from '../../assets'
+
 export default function Work() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/WebPagesRefactor' : ''
+  const pathname = usePathname();
 
   return (
     <main>
+      <PillNav
+        logo={logo}
+        logoAlt="Passion Lab Polimi Logo"
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'About', href: '/about' },
+          { label: 'Services', href: '/services' },
+          { label: 'Contact', href: '/contact' }
+        ]}
+        activeHref={pathname}
+        className="custom-nav"
+        ease="power2.easeOut"
+        baseColor="#000000"
+        pillColor="#ffffff"
+        hoveredPillTextColor="#ffffff"
+        pillTextColor="#000000"
+        onMobileMenuClick={() => {}}
+      />
       <div className="page-container">
         <h1>Work</h1>
-        <nav>
-          <a href={`${basePath}/`}>Home</a>
-          <a href={`${basePath}/wechatgroups`}>WeChat Groups</a>
-          <a href={`${basePath}/events`}>Events</a>
-          <a href={`${basePath}/join-us`}>Join Us</a>
-        </nav>
       </div>
     </main>
   )
