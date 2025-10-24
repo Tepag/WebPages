@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-name: Deploy PLP Website
+name: Deploy PLP Website to GitHub Pages
 
 on:
   push:
@@ -9,32 +6,10 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Allow manual triggering
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     permissions:
       contents: read
       pages: write
@@ -49,25 +24,6 @@ jobs:
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       with:
         node-version: '18'
         cache: 'npm'
@@ -75,9 +31,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     - name: Build and export static site
       run: npm run build
       
@@ -156,26 +109,3 @@ jobs:
         name: build-files
         path: ./gh-pages
         retention-days: 7
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    - name: Build
-      run: npm run build
-      
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-        cname: ${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
