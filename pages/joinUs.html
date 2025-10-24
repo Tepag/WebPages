@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLP | Join Us</title>
+  <meta name="description" content="Join PLP – Passion Lab Polimi">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/images/logo.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/components/navbar.js"></script>
+  <style>
+    .handwritten-red {
+      font-family: 'LXGW WenKai TC', cursive;
+      color: #ffffff;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    }
+    
+    .handwritten-yellow {
+      font-family: 'LXGW WenKai TC', cursive;
+      color: #87CEEB;
+      font-weight: 400;
+    }
+    
+    .section-divider {
+      border-top: 2px dotted #8A2BE2;
+      margin: 3rem 0;
+    }
+    
+    .solid-divider {
+      border-top: 2px solid #8A2BE2;
+      margin: 3rem 0;
+    }
+    
+    .club-box {
+      border: 2px solid #8A2BE2;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 0.5rem;
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+      display: inline-block;
+      min-width: 150px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .club-box:hover {
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    }
+    
+    .event-box {
+      border: 2px solid #8A2BE2;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 0.5rem;
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+      display: inline-block;
+      width: 100%;
+      min-height: 80px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .event-box:hover {
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    }
+    
+    .join-button {
+      border: 2px solid #8A2BE2;
+      border-radius: 15px;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+      color: white;
+      font-family: 'LXGW WenKai TC', cursive;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .join-button:hover {
+      background: linear-gradient(135deg, rgba(138, 43, 226, 0.4), rgba(75, 0, 130, 0.4));
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+    }
+    
+    .heart {
+      color: #8A2BE2;
+      font-size: 2rem;
+      margin: 0 0.5rem;
+      text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    }
+    
+    .typing-effect {
+      overflow: hidden;
+      border-right: 2px solid #8A2BE2;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #8A2BE2; }
+    }
+    
+    .club-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 1rem 0;
+    }
+    
+    .club-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    .club-scroll::-webkit-scrollbar-track {
+      background: rgba(138, 43, 226, 0.1);
+      border-radius: 4px;
+    }
+    
+    .club-scroll::-webkit-scrollbar-thumb {
+      background: #8A2BE2;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="lxgw-wenkai-tc-regular" style="background-color: #101010; color: white;">
+  
+  <!-- Slogan Section -->
+  <section class="section" style="padding-top: 8rem; padding-bottom: 2rem;">
+    <div class="container is-max-desktop">
+      <h1 class="handwritten-red" style="font-size: 3rem; margin-bottom: 2rem;">Passion Lab Polimi</h1>
+      <div class="has-text-centered" style="margin-bottom: 2rem;">
+        <figure class="image is-128x128" style="margin: 0 auto;">
+          <img src="../assets/images/logo.png" alt="PLP Logo" style="border-radius: 50%; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+        </figure>
+      </div>
+      <p class="handwritten-yellow has-text-centered" style="font-size: 1.5rem; margin-top: 1rem;">where passion sprout</p>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Chi Siamo Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="handwritten-red" style="font-size: 2.5rem; margin-bottom: 2rem;">CHI SIAMO</h2>
+      <div class="columns is-variable is-8">
+        <div class="column is-half">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/2-min.jpg" alt="Team Photo" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+        </div>
+        <div class="column is-half">
+          <p class="handwritten-yellow" style="font-size: 1.5rem; margin-bottom: 1rem;">Descrizione</p>
+          <p class="handwritten-yellow" style="font-size: 1.2rem; margin-bottom: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <p class="handwritten-yellow" style="font-size: 1.5rem;">Associazione</p>
+          <p class="handwritten-yellow" style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Eventi Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="handwritten-red" style="font-size: 2.5rem; margin-bottom: 2rem;">EVENTI</h2>
+      <div class="columns is-variable is-4">
+        <div class="column">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/3-min.jpg" alt="Welcome Night 2024" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+          <div class="event-box handwritten-red" style="font-size: 1.3rem;">Welcome Night 2024</div>
+        </div>
+        <div class="column">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/4-min.jpg" alt="Welcome Night 2025" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+          <div class="event-box handwritten-red" style="font-size: 1.3rem;">Welcome Night 2025</div>
+        </div>
+        <div class="column">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/5-min.jpg" alt="Future Events" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+          <div class="event-box handwritten-red" style="font-size: 1.3rem;">To be continued.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Club Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="handwritten-red" style="font-size: 2.5rem; margin-bottom: 2rem;">CLUB</h2>
+      <div class="club-scroll">
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Ping Pong</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Badminton</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Dibattito 辩论</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Chess</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Film</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Music</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Reading</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Soccer</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Tennis</div>
+        <div class="club-box handwritten-red" style="font-size: 1.3rem;">Volleyball</div>
+      </div>
+      <div class="has-text-centered" style="margin-top: 1rem;">
+        <span class="handwritten-yellow" style="font-size: 1.2rem;">→</span>
+        <span class="handwritten-yellow" style="font-size: 1.2rem; margin-left: 0.5rem;">uno dopo altro che puoi scrollare</span>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Il Team Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="handwritten-red" style="font-size: 2.5rem; margin-bottom: 2rem;">IL TEAM</h2>
+      
+      <!-- Team Info -->
+      <div class="columns is-variable is-8">
+        <div class="column is-half">
+          <figure class="image" style="margin-bottom: 2rem;">
+            <img src="../assets/images/6-min.jpg" alt="Team Members" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+        </div>
+        <div class="column is-half">
+          <div class="has-text-centered">
+            <p class="handwritten-red" style="font-size: 1.5rem; margin-bottom: 1rem;">BBB</p>
+            <p class="handwritten-red" style="font-size: 1.5rem; margin-bottom: 1rem;">PASSION LAB POLIMI</p>
+            <p class="handwritten-yellow" style="font-size: 1.3rem; margin-bottom: 1rem;">Organigramma</p>
+            <p class="handwritten-yellow" style="font-size: 1.1rem; margin-bottom: 2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Recruitment Section -->
+      <div class="section-divider"></div>
+      
+      <div class="has-text-centered" style="margin: 3rem 0;">
+        <h3 class="handwritten-red" style="font-size: 2rem; margin-bottom: 2rem;">RECRUITMENT</h3>
+        
+        <div class="columns is-variable is-6">
+          <div class="column">
+            <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1)); border: 2px solid #8A2BE2; border-radius: 15px; padding: 2rem; margin: 1rem 0;">
+              <figure class="image is-96x96" style="margin: 0 auto 1rem;">
+                <img src="../assets/images/9-min.jpg" alt="Join Our Team" style="border-radius: 50%; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+              </figure>
+              <h4 class="handwritten-red" style="font-size: 1.3rem; margin-bottom: 1rem;">Open Positions</h4>
+              <p class="handwritten-yellow" style="font-size: 1rem;">We're looking for passionate individuals to join our team. Various roles available!</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1)); border: 2px solid #8A2BE2; border-radius: 15px; padding: 2rem; margin: 1rem 0;">
+              <figure class="image is-96x96" style="margin: 0 auto 1rem;">
+                <img src="../assets/images/10.jpg.webp" alt="Apply Now" style="border-radius: 50%; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+              </figure>
+              <h4 class="handwritten-red" style="font-size: 1.3rem; margin-bottom: 1rem;">How to Apply</h4>
+              <p class="handwritten-yellow" style="font-size: 1rem;">Send us your CV and motivation letter. We'll get back to you soon!</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1)); border: 2px solid #8A2BE2; border-radius: 15px; padding: 2rem; margin: 1rem 0;">
+              <figure class="image is-96x96" style="margin: 0 auto 1rem;">
+                <img src="../assets/images/11-min.jpg" alt="Benefits" style="border-radius: 50%; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+              </figure>
+              <h4 class="handwritten-red" style="font-size: 1.3rem; margin-bottom: 1rem;">Benefits</h4>
+              <p class="handwritten-yellow" style="font-size: 1rem;">Great team environment, learning opportunities, and amazing experiences!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+          <p class="handwritten-red" style="font-size: 1.8rem; margin-bottom: 2rem;">Vuoi entrare anche tu?</p>
+          
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <button class="join-button" onclick="window.location.href='./wechatgroups.html'">
+              Join Us
+            </button>
+            <button class="join-button" onclick="alert('Contact us at recruitment@plp.com')">
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Story Continuation Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <div style="margin-bottom: 1rem;">
+          <span class="heart">♥</span>
+          <span class="heart">♥</span>
+          <span class="heart">♥</span>
+        </div>
+        <p class="handwritten-red typing-effect" style="font-size: 1.5rem;">LA STORIA NON FINISCE QUI...</p>
+        <p class="handwritten-yellow" style="font-size: 1rem; margin-top: 1rem;">Sono puntini che hanno effetto Scrittura</p>
+      </div>
+    </div>
+  </section>
+  
+  <div class="solid-divider"></div>
+  
+  <!-- Info Vari Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="handwritten-red" style="font-size: 2rem; margin-bottom: 2rem;">Info vari (contatti)</h2>
+      <p class="handwritten-yellow" style="font-size: 1.1rem; margin-top: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      
+      <!-- Content sections -->
+      <div class="columns is-variable is-8" style="margin-top: 2rem;">
+        <div class="column is-half">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/7-min.jpg" alt="Contact Info" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+          </figure>
+          <div style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 2rem;">
+            <h3 class="handwritten-red" style="font-size: 1.5rem; margin-bottom: 1rem;">Contatti</h3>
+            <p class="handwritten-yellow" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+        </div>
+        
+        <div class="column is-half">
+          <figure class="image" style="margin-bottom: 1rem;">
+            <img src="../assets/images/8-min.jpg" alt="Additional Info" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);">
+      </figure>
+          <div style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 2rem;">
+            <h3 class="handwritten-red" style="font-size: 1.5rem; margin-bottom: 1rem;">Informazioni Aggiuntive</h3>
+            <p class="handwritten-yellow" style="font-size: 1.1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

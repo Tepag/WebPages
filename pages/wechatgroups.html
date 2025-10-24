@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PLP | Groups</title>
+    <meta name="description" content="找到属于你的兴趣社团，与志同道合的伙伴共同成长，让我们一起探索、学习和进步！">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vendor/purecssflipcard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/components/navbar.js"></script> <!--Navbar-->
+    
+</head>
+
+<body class="lxgw-wenkai-tc-regular">
+
+    <!--ringraziamo un altro god-->
+    <!-- horizontal -->
+
+    <div class="grid is-col-min-15 is-centered" id="groupsMainPart" style="margin-top: 5%;">
+    
+    </div>
+
+    <script>
+
+        $('groupsMainPart').ready(function(){
+            getLanguage(); // Ensure language is loaded on document ready
+            var y = language.groups.count;
+            for (var x = 1; x <= y; x++) {
+                var groupHtml = `
+                <div class="grid is-centered">
+                    <div class="flip">
+                        <div class="front" id="groupsC${x}Image">
+                        <h1 class="text-shadow" id="groupsC${x}Title"></h1>
+                        </div>
+                        <div class="back">
+                            <h2 id="groupsC${x}Text"></h2>
+                            <div class="buttons is-centered are-large" style="margin-top: 30%;">
+                                <a id="groupsC${x}Telegram" href="#">
+                                    <button class="button">
+                                        <img src="../assets/svg/telegram.svg" alt="wechat" style="width: 20px; height: 20px;">
+                                    </button>
+                                </a>
+                                <a id="groupsC${x}Whatsapp" href="#">
+                                    <button class="button">
+                                        <img src="../assets/svg/whatsapp.svg" alt="wechat" style="width: 20px; height: 20px;">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                $('.grid.is-col-min-15.is-centered').append(groupHtml);
+            }
+        });
+
+        $(document).ready(function(){
+            getLinks();
+            getLanguage(); // Ensure language is loaded on document ready
+
+            for (var i = 1; i <= language.groups.count; i++) {
+                $('#groupsC' + i + 'Title').text(language.groups['c' + i].title);
+                $('#groupsC' + i + 'Text').text(language.groups['c' + i].text);
+                $('#groupsC' + i + 'Image').attr('style', 'background-image: url(' + language.groups['c' + i].image + ')');
+                $('#groupsC' + i + 'Telegram').attr(language.groups['c' + i].telegram);
+                $('#groupsC' + i + 'Whatsapp').attr(language.groups['c' + i].whatsapp);
+            }
+            
+        });
+    </script>
+</body>
+
+</html>
