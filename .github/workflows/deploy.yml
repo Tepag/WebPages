@@ -2,9 +2,9 @@ name: Deploy PLP Website to GitHub Pages
 
 on:
   push:
-    branches: [ development ]
+    branches: [ main ]
   pull_request:
-    branches: [ development ]
+    branches: [ main ]
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
@@ -88,11 +88,11 @@ jobs:
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
-      if: github.ref == 'refs/heads/development'
+      if: github.ref == 'refs/heads/main'
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
-      if: github.ref == 'refs/heads/development'
+      if: github.ref == 'refs/heads/main'
       with:
         path: ./gh-pages
         retention-days: 30
@@ -100,7 +100,7 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-      if: github.ref == 'refs/heads/development'
+      if: github.ref == 'refs/heads/main'
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
