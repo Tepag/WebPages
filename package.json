@@ -1,44 +1,27 @@
 {
-  "name": "webpages-refactor",
-  "version": "1.0.0",
-  "description": "A React-based website with Next.js and GitHub Pages deployment",
+  "name": "webpages",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
-    "start": "next start -p 3000",
-    "export": "next build && next export",
-    "lint": "eslint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "homepage": "https://tepag.github.io/WebPagesRefactor",
   "dependencies": {
-    "gsap": "^3.13.0",
-    "next": "15.5.5",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.5",
-    "gh-pages": "^6.3.0",
-    "typescript": "^5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
   }
 }
