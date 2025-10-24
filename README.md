@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # PLP - Passion Lab Polimi Website
 
 A modern Next.js application for PLP (Passion Lab Polimi) featuring interactive recruitment process, event management, and WeChat groups integration.
@@ -352,3 +353,117 @@ For issues and questions:
 ---
 
 **Built with ❤️ for PLP - Passion Lab Polimi**
+=======
+# WebPages Refactor
+
+A modern React-based website with GitHub Pages deployment.
+
+## Features
+
+- ⚛️ React 18 with modern hooks
+- 🛣️ React Router for client-side routing
+- 📱 Responsive design
+- 🚀 Automated GitHub Pages deployment
+- 🎨 Clean, modern UI with CSS Grid and Flexbox
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable React components
+├── pages/              # Page components
+│   ├── Home.js         # Main landing page
+│   ├── Home.css        # Home page styles
+│   ├── SecondaryPage.js # Test page with green background
+│   └── SecondaryPage.css
+├── styles/             # Global styles
+│   └── App.css         # Main application styles
+├── App.js              # Main App component with routing
+└── index.js            # React entry point
+
+public/
+└── index.html          # HTML template
+
+.github/
+└── workflows/
+    └── deploy.yml      # GitHub Actions deployment workflow
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/WebPagesRefactor.git
+cd WebPagesRefactor
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This builds the app for production to the `build` folder.
+
+## Deployment
+
+The project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup GitHub Pages
+
+1. Go to your repository settings
+2. Navigate to "Pages" section
+3. Set source to "GitHub Actions"
+4. The workflow will automatically deploy when you push to the main branch
+
+### Manual Deployment
+
+You can also deploy manually using:
+
+```bash
+npm run deploy
+```
+
+## Pages
+
+- **Home Page** (`/`): Main landing page with features showcase
+- **Secondary Page** (`/secondary`): Test page with green background to verify routing
+
+## Technologies Used
+
+- React 18
+- React Router DOM
+- CSS3 with modern features
+- GitHub Actions
+- GitHub Pages
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+>>>>>>> Stashed changes

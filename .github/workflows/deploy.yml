@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 name: Deploy PLP Website
 
 on:
@@ -6,10 +7,20 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Allow manual triggering
+=======
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+>>>>>>> Stashed changes
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+<<<<<<< Updated upstream
     permissions:
       contents: read
       pages: write
@@ -24,6 +35,15 @@ jobs:
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
+=======
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+>>>>>>> Stashed changes
       with:
         node-version: '18'
         cache: 'npm'
@@ -31,6 +51,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
+<<<<<<< Updated upstream
     - name: Build and export static site
       run: npm run build
       
@@ -109,3 +130,16 @@ jobs:
         name: build-files
         path: ./gh-pages
         retention-days: 7
+=======
+    - name: Build
+      run: npm run build
+      
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        cname: ${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+
+>>>>>>> Stashed changes
