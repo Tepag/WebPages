@@ -1,5 +1,6 @@
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "name": "next",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,8 @@
     "eslint-config-next": "15.5.5",
     "@eslint/eslintrc": "^3"
 =======
+=======
+>>>>>>> Stashed changes
   "name": "webpages-refactor",
   "version": "1.0.0",
   "description": "A React-based website with GitHub Pages deployment",
@@ -60,6 +63,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   }
 }
