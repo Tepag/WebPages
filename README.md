@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # PLP - Passion Lab Polimi Website
 
 A modern Next.js application for PLP (Passion Lab Polimi) featuring interactive recruitment process, event management, and WeChat groups integration.
@@ -357,6 +358,8 @@ For issues and questions:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 # WebPages Refactor
 
 A modern React-based website with GitHub Pages deployment.
@@ -469,6 +472,10 @@ npm run deploy
 ## License
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+This project is licensed under the MIT License.
+>>>>>>> Stashed changes
+=======
 This project is licensed under the MIT License.
 >>>>>>> Stashed changes
 =======
