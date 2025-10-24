@@ -1,0 +1,111 @@
+name: Deploy PLP Website to GitHub Pages
+
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ]
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build and export static site
+      run: npm run build
+      
+    - name: Verify build output
+      run: |
+        echo "Build output structure:"
+        ls -la out/
+        echo "Assets directory:"
+        ls -la out/assets/ || echo "No assets directory found"
+        echo "CSS directory:"
+        ls -la out/css/ || echo "No css directory found"
+        echo "Checking if logo exists:"
+        ls -la out/assets/images/logo.png || echo "Logo not found"
+    
+    - name: Prepare files for GitHub Pages
+      run: |
+        # Create a temporary directory for GitHub Pages
+        mkdir -p gh-pages
+        
+        # Copy all files from out/ to gh-pages/
+        cp -r out/* gh-pages/
+        
+        # Fix CSS paths - copy assets to css directory for relative paths
+        mkdir -p gh-pages/css/assets
+        cp -r gh-pages/assets/* gh-pages/css/assets/
+        
+        # Also ensure public assets are copied correctly
+        if [ -d "public" ]; then
+          echo "Copying public assets..."
+          cp -r public/* gh-pages/
+        fi
+        
+        # Create _redirects file for client-side routing
+        echo "/*    /index.html   200" > gh-pages/_redirects
+        
+        # Create 404.html for GitHub Pages
+        cp gh-pages/index.html gh-pages/404.html
+        
+        # Verify the structure
+        echo "GitHub Pages structure:"
+        ls -la gh-pages/
+        echo "Assets in GitHub Pages:"
+        ls -la gh-pages/assets/ || echo "No assets directory found"
+        echo "CSS in GitHub Pages:"
+        ls -la gh-pages/css/ || echo "No css directory found"
+        echo "CSS assets:"
+        ls -la gh-pages/css/assets/ || echo "No css assets directory found"
+        echo "Checking critical files:"
+        ls -la gh-pages/index.html || echo "index.html not found"
+        ls -la gh-pages/_redirects || echo "_redirects not found"
+        ls -la gh-pages/404.html || echo "404.html not found"
+        echo "Checking if logo exists in both locations:"
+        ls -la gh-pages/assets/images/logo.png || echo "Logo not found in assets"
+        ls -la gh-pages/css/assets/images/logo.png || echo "Logo not found in css/assets"
+      
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      if: github.ref == 'refs/heads/development'
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      if: github.ref == 'refs/heads/development'
+      with:
+        path: ./gh-pages
+        retention-days: 30
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      if: github.ref == 'refs/heads/development'
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      if: github.event_name == 'pull_request'
+      with:
+        name: build-files
+        path: ./gh-pages
+        retention-days: 7
