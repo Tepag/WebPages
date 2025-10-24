@@ -10,7 +10,7 @@
     "export": "next build && next export",
     "lint": "eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -b development"
+    "deploy": "gh-pages -d out"
   },
   "homepage": "https://tepag.github.io/WebPagesRefactor",
   "dependencies": {
