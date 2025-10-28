@@ -2,37 +2,40 @@ import { useState } from 'react'
 import plpLogo from '../../assets/images/logo.png'
 import viteLogo from '/vite.svg'
 import './Home.css'
+import { COLORS } from '../../const/COLORS'
 
 import CardNav from '../../components/CardNav/CardNav'
 
 
 const items = [
   {
-    label: "About",
+    label: "精彩内容",
     bgColor: "#0D0716",
     textColor: "#fff",
     links: [
-      { label: "Company", ariaLabel: "About Company" },
-      { label: "Careers", ariaLabel: "About Careers" }
+      { label: "兴趣社团"},
+      { label: "往年活动"},
+      { label: "进行中"}
     ]
   },
   {
-    label: "Projects", 
+    label: "关于我们", 
     bgColor: "#170D27",
     textColor: "#fff",
     links: [
-      { label: "Featured", ariaLabel: "Featured Projects" },
-      { label: "Case Studies", ariaLabel: "Project Case Studies" }
+      { label: "加入我们"},
+      { label: "了解我们的社团"}
     ]
   },
   {
-    label: "Contact",
+    label: "更多",
     bgColor: "#271E37", 
     textColor: "#fff",
     links: [
-      { label: "Email", ariaLabel: "Email us" },
-      { label: "Twitter", ariaLabel: "Twitter" },
-      { label: "LinkedIn", ariaLabel: "LinkedIn" }
+      { label: "Youtube"},
+      { label: "Instagram"},
+      { label: "小红书"},
+      { label: "赞助商"}
     ]
   }
 ];
