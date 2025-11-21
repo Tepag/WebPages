@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import plpLogo from '../../assets/images/logo.png'
 import viteLogo from '/vite.svg'
 import './Home.css'
 import { COLORS } from '../../const/COLORS'
